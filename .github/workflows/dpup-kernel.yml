@@ -62,6 +62,7 @@ jobs:
           cd linux-$ver
           ./scripts/kconfig/merge_config.sh /tmp/base ../debian-diffconfigs/${{ matrix.release }}
           mv -f .config ../configs_${{ matrix.arch }}/DOTconfig-$ver-${{ matrix.arch }}
+          apt-get autoremove -y linux-source
           cd ..
           rm -rf linux-$ver
           md5sum sources/kernels/linux-$ver.tar.xz | sed s~sources/kernels/~~ > sources/kernels/linux-$ver.tar.xz.md5.txt
@@ -73,9 +74,11 @@ jobs:
           echo "AUTO=yes" >> build.conf
           echo "AUFS=no" >> build.conf
           CREATE_KBUILD_SFS=yes ./build.sh
+          rm -rf kernel_sources-*
           ./usrmerge.sh
           mkdir small-output
           mv `ls output/kernel_sources-*.sfs* output/kbuild-*.sfs* output/*.tar* 2>/dev/null` small-output
+          rm -rf output
       - name: Upload kernel
         uses: actions/upload-artifact@v3
         with:
