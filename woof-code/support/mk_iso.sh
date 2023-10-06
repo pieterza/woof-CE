@@ -53,7 +53,7 @@ insmod iso9660
 insmod udf
 
 background_image /boot/splash.png
-set timeout=10
+set timeout=3
 
 # https://help.ubuntu.com/community/Grub2/Displays
 color_normal=cyan/black
