@@ -107,6 +107,7 @@ yes|parted|parted|exe,dev,doc,nls||deps:yes
 yes|passwd|passwd|exe,dev,doc,nls||deps:yes
 yes|pavucontrol|pavucontrol|exe,dev,doc,nls||deps:yes
 yes|pciutils|pciutils,libpci3|exe,dev,doc,nls||deps:yes
+yes|pcmanfm|pcmanfm|exe,dev,doc,nls||deps:yes
 yes|perl|perl,perl-base|exe,dev,doc,nls||deps:yes
 yes|pigz|pigz|exe,dev,doc,nls||deps:yes
 yes|procps|procps|exe,dev,doc,nls||deps:yes
