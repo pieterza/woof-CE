@@ -118,7 +118,7 @@ build_grub2_cfg() {
 	fi
 	cat >> $outfile <<EOF # append
 menuentry "${distrodesc}" {
-    linux /vmlinuz pmedia=cd $bootopts $loopback
+    linux /vmlinuz pmedia=usbflash $bootopts $loopback
     $INITRDG
 }
 
@@ -139,7 +139,7 @@ build_menu_lst() {
 	fi
 	cat >> $outfile <<EOF # append
 title ${distrodesc}
-  kernel /vmlinuz    pmedia=cd $bootopts
+  kernel /vmlinuz    pmedia=usbflash $bootopts
   $INITRDM
 
 EOF
