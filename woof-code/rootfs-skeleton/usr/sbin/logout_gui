@@ -53,11 +53,6 @@ S='
         '"`/usr/lib/gtkdialog/xml_button-icon graphics_restart.svg huge`"'
         <action>exit:restartx</action>
       </button>
-      <button image-position="2">
-        <label>'$(gettext 'Exit to Prompt')'</label>
-        '"`/usr/lib/gtkdialog/xml_button-icon terminal.svg huge`"'
-        <action>exit:logout</action>
-      </button>
     </hbox>
     
     <hbox spacing="10" homogeneous="true" space-expand="true" space-fill="true">'
