@@ -195,4 +195,6 @@ which $CURRENTWM && exec $CURRENTWM
 [ -x $CURRENTWM ] && exec $CURRENTWM
 [ "$desktop" = "rox" ] && exec jwm
 
+set_wallpaper /etc/ccs/wall.svg
+
 ###END###
