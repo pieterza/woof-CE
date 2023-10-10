@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<JWM>
-
-<Include>/root/.jwm/jwmrc-tray1_hybrid</Include>
-<Tray autohide="bottom" insert="right" layer="above" halign="center" height="30" layout="horizontal" >
-    <Spacer width="5" height="30"></Spacer>
-    <TrayButton popup="Web Browser" border="false" icon="/usr/local/lib/X11/pixmaps/www48.png">exec:defaultbrowser</TrayButton>
-</Tray>
-</JWM>

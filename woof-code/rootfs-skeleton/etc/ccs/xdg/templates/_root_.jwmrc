@@ -29,8 +29,6 @@
 <Program label="Firefox ESR" icon="Internet.svg" tooltip="Browse the World Wide Web">/usr/lib/firefox-esr/firefox-esr</Program>
  <Separator/> 
 <Program label="Jami" icon="jami" tooltip="Privacy-oriented voice, video, chat, and conference platform">jami</Program>
- <Separator/> 
-<Program label="LXTerminal" icon="/usr/share/pixmaps/puppy/terminal.svg" tooltip="Use the command line">lxterminal</Program>
 </Menu>
 <Separator/>
 <Program label="Leave" icon="shutdown48.png">/usr/sbin/logout_gui</Program>
