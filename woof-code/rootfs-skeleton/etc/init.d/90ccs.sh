@@ -10,4 +10,4 @@ cp /etc/ccs/xdg/templates/_root_.jwmrc /root/.jwmrc
 echo "Overwriting jwm tray"
 cp /etc/ccs/jwm* /root/.jwm/
 echo "Setting wallpaper"
-set_wallpaper /etc/ccs/wall.svg
+set_bg /etc/ccs/wall.svg
