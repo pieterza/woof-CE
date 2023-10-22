@@ -31,7 +31,6 @@
 <Program label="Jami" icon="jami" tooltip="Privacy-oriented voice, video, chat, and conference platform">jami</Program>
 </Menu>
 <Separator/>
-<Program label="Help" icon="help48.png">/usr/sbin/puppyhelp</Program>
 <Program label="Leave" icon="shutdown48.png">/usr/sbin/logout_gui</Program>
 </RootMenu>
  

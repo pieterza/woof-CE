@@ -11,6 +11,6 @@
     <Dock></Dock>
     <Spacer width="5" height="5"></Spacer>
     <TrayButton popup="Leave Puppy" border="false" icon="/usr/local/lib/X11/pixmaps/shutdown48.png">exec:/usr/sbin/logout_gui</TrayButton>
-    <Clock format="%H:%M">root:7</Clock>
+    <Clock format="%H:%M"></Clock>
 </Tray>
 </JWM>
