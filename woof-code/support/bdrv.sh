@@ -21,7 +21,7 @@ arm64) ARCH=aarch64 ;;
 esac
 
 case "$DISTRO_BINARY_COMPAT" in
-debian) MIRROR=http://deb.debian.org/debian ;;
+debian) MIRROR=http://debian.mirror.ac.za/debian ;;
 devuan) MIRROR=http://deb.devuan.org/merged ;;
 ubuntu) MIRROR=http://archive.ubuntu.com/ubuntu ;;
 *) exit 1 ;;
