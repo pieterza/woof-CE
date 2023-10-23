@@ -153,7 +153,7 @@ case $DISTRO_BINARY_COMPAT in ubuntu|trisquel|debian|devuan) #130319 removed |ra
       if [ $? -eq 0 ]; then
          DBUPDATEFLAG='yes'
          #Packages-ubuntu-precise-main -> Packages-ubuntu-precise_updates-main
-         #http://za.archive.ubuntu.com/ubuntu/dists/precise/main/binary-i386/Packages.bz2 -> http://archive.ubuntu.com/ubuntu/dists/precise-updates/main/binary-i386/Packages.bz2
+         #http://archive.ubuntu.com/ubuntu/dists/precise/main/binary-i386/Packages.bz2 -> http://archive.ubuntu.com/ubuntu/dists/precise-updates/main/binary-i386/Packages.bz2
          PKGLISTS_COMPAT_U=$(echo "$PKG_DOCS_DISTRO_COMPAT" | tr ' ' '\n' | grep -v 'deb-multimedia' | \
             grep "Packages-${DISTRO_BINARY_COMPAT}-${DISTRO_COMPAT_VERSION}" |
             sed -e "s|-${DISTRO_COMPAT_VERSION}-|-${DISTRO_COMPAT_VERSION}_updates-|" \
@@ -214,20 +214,20 @@ z|http://deb.devuan.org/merged/dists/${DISTRO_COMPAT_VERSION}-security/non-free-
    PKGLISTS_COMPAT_UPDATES="$PKGLISTS_COMPAT_UPDATES $(echo "$PKGLISTS_COMPAT_S" | cut -f 3 -d "|" | tr '\n' ' ')"
  fi
 elif [ "$DISTRO_BINARY_COMPAT" = "ubuntu" -a -n "$PKG_DOCS_DISTRO_COMPAT" ]; then
-  wget --spider --tries 1 -T 3 -F --max-redirect 0 --no-check-certificate http://za.archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/
+  wget --spider --tries 1 -T 3 -F --max-redirect 0 --no-check-certificate http://archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/
   if [ $? -eq 0 ]; then
    DBUPDATEFLAG='yes'
-   PKGLISTS_COMPAT_S="z|http://za.archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/main/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-main
-z|http://za.archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/universe/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-universe
-z|http://za.archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/multiverse/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-multiverse
-z|http://za.archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/restricted/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-restricted"
+   PKGLISTS_COMPAT_S="z|http://archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/main/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-main
+z|http://archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/universe/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-universe
+z|http://archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/multiverse/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-multiverse
+z|http://archive.ubuntu.com/ubuntu/dists/${DISTRO_COMPAT_VERSION}-security/restricted/binary-${DBIN_ARCH}/Packages.xz|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-security-restricted"
    download_pkg_dbs compat $PKGLISTS_COMPAT_S
    PKGLISTS_COMPAT_UPDATES="$PKGLISTS_COMPAT_UPDATES $(echo "$PKGLISTS_COMPAT_S" | cut -f 3 -d "|" | tr '\n' ' ')"
 
    if [ "$RUNNINGPUP" = "no" ]; then
     cat << EOF >> $DCRFILE
 # appended by 0setup
-REPOS_DISTRO_COMPAT="$REPOS_DISTRO_COMPAT z|http://za.archive.ubuntu.com/ubuntu|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-*"
+REPOS_DISTRO_COMPAT="$REPOS_DISTRO_COMPAT z|http://archive.ubuntu.com/ubuntu|Packages-ubuntu-${DISTRO_COMPAT_VERSION}-*"
 EOF
    fi
  fi

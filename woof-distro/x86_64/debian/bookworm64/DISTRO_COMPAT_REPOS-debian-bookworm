@@ -21,10 +21,10 @@ esac
 #   3 - name of db file when local and after being processed into standard format
 
 PKG_DOCS_DISTRO_COMPAT="
-z|http://debian.mirror.ac.za/debian/dists/${DISTRO_COMPAT_VERSION}/main/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-main
-z|http://debian.mirror.ac.za/debian/dists/${DISTRO_COMPAT_VERSION}/non-free/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free
-z|http://debian.mirror.ac.za/debian/dists/${DISTRO_COMPAT_VERSION}/non-free-firmware/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free-firmware
-z|http://debian.mirror.ac.za/debian/dists/${DISTRO_COMPAT_VERSION}/contrib/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-contrib
+z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/main/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-main
+z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free
+z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free-firmware/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free-firmware
+z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/contrib/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-contrib
 z|https://dl.jami.net/nightly/debian_12/dists/jami/main/binary-amd64/Packages.gz|Packages-jami-main-binary-amd64-*
 "
 
@@ -37,9 +37,9 @@ z|https://dl.jami.net/nightly/debian_12/dists/jami/main/binary-amd64/Packages.gz
 #   3 - name of db-file(s) associated with that repo. it may have glob wildcards.
 
 REPOS_DISTRO_COMPAT="
-z|http://debian.mirror.ac.za/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
-z|https://mirrors.kernel.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 z|https://http.us.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
+z|https://mirrors.kernel.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
+z|https://ftp.de.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 "
 
 
