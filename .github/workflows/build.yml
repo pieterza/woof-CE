@@ -67,7 +67,7 @@ jobs:
         sudo install -D -m 644 woof-code/rootfs-skeleton/usr/local/petget/categories.dat /usr/local/petget/categories.dat
         echo "dash dash/sh boolean false" | sudo debconf-set-selections
         sudo DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
-        sudo ln -sf bash /bin/ash
+        sudo ln -s bash /bin/ash
         [ "${{ inputs.compat-distro }}" != void ] || echo "LD_LIBRARY_PATH=/lib:/usr/lib:/lib64:/usr/lib64" >> $GITHUB_ENV
     - name: merge2out
       timeout-minutes: 5
