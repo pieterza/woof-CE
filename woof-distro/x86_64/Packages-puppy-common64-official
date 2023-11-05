@@ -29,9 +29,6 @@ flashrom-v1.1-x86_64_common64|flashrom|v1.1-x86_64_common64||BuildingBlock|664||
 flashrom_DOC-v1.1-x86_64_common64|flashrom_DOC|v1.1-x86_64_common64||BuildingBlock|68||flashrom_DOC-v1.1-x86_64_common64.pet|+flashrom|flashrom documentation||||
 fuse-exfat-1.3.0-x86_64_common64|fuse-exfat|1.3.0-x86_64_common64||BuildingBlock|60||fuse-exfat-1.3.0-x86_64_common64.pet||fuse-exfat|slackware64|14.0||
 fuse-exfat_DOC-1.3.0-x86_64_common64|fuse-exfat_DOC|1.3.0-x86_64_common64||BuildingBlock|24||fuse-exfat_DOC-1.3.0-x86_64_common64.pet|+fuse-exfat|fuse-exfat documentation||||
-galculator-2.1.4-x86_64_common64|galculator|2.1.4-x86_64_common64||Business|992||galculator-2.1.4-x86_64_common64.pet|+gtk|Nice light weight calculator|slackware64|14.0||
-galculator_DOC-2.1.4-x86_64_common64|galculator_DOC|2.1.4-x86_64_common64||Business|24||galculator_DOC-2.1.4-x86_64_common64.pet|+galculator|galculator documentation||||
-galculator_NLS-2.1.4-x86_64_common64|galculator_NLS|2.1.4-x86_64_common64||Business|732||galculator_NLS-2.1.4-x86_64_common64.pet|+galculator|galculator locales||||
 gcolor2-0.4.1w-x86_64_common64|gcolor2|0.4.1w-x86_64_common64||Graphic|84||gcolor2-0.4.1w-x86_64_common64.pet|+gtk+2|gtk color picker|slackware64|14.0||
 gdmap-0.8.1-x86_64_common64|gdmap|0.8.1-x86_64_common64||Utility|136||gdmap-0.8.1-x86_64_common64.pet||graphical disc usage|slackware64|14.0||
 gdmap_DOC-0.8.1-x86_64_common64|gdmap_DOC|0.8.1-x86_64_common64||Utility|24||gdmap_DOC-0.8.1-x86_64_common64.pet|+gdmap|gdmap documentation||||
@@ -39,9 +36,6 @@ gdmap_NLS-0.8.1-x86_64_common64|gdmap_NLS|0.8.1-x86_64_common64||Utility|176||gd
 getcurpos-0.1-x86_64_common64|getcurpos|0.1-x86_64_common64||BuildingBlock|20||getcurpos-0.1-x86_64_common64.pet||BuildingBlock|slackware64|14.0||
 gexec-0.4-patched1-x86_64_common64|gexec|0.4-patched1-x86_64_common64||BuildingBlock|48||gexec-0.4-patched1-x86_64_common64.pet|+gtk+2|utility to launch programs|slackware64|14.0||
 gmrun-0.9.5w-x86_64_common64|gmrun|0.9.5w-x86_64_common64||Utility|112||gmrun-0.9.5w-x86_64_common64.pet|+gtk+2|utility to launch programs|slackware64|14.0||
-gnome-mplayer-1.1.3w-x86_64_common64|gnome-mplayer|1.1.3w-x86_64_common64||BuildingBlock|548||gnome-mplayer-1.1.3w-x86_64_common64.pet||media player|slackware64|14.2||
-gnome-mplayer_DOC-1.1.3w-x86_64_common64|gnome-mplayer_DOC|1.1.3w-x86_64_common64||BuildingBlock|64||gnome-mplayer_DOC-1.1.3w-x86_64_common64.pet|+gnome-mplayer|gnome-mplayer documentation||||
-gnome-mplayer_NLS-1.1.3w-x86_64_common64|gnome-mplayer_NLS|1.1.3w-x86_64_common64||BuildingBlock|1184||gnome-mplayer_NLS-1.1.3w-x86_64_common64.pet|+gnome-mplayer|gnome-mplayer locales||||
 gptfdisk-1.0.4-x86_64_common64|gptfdisk|1.0.4-x86_64_common64||BuildingBlock|688||gptfdisk-1.0.4-x86_64_common64.pet||A text-mode partitioning tool that works on GUID Partition Table (GPT) disks|slackware64|14.0||
 gtk-server-2.4.4-x86_64_common64|gtk-server|2.4.4-x86_64_common64||BuildingBlock|520||gtk-server-2.4.4-x86_64_common64.pet||gtk-server||||
 grsync-1.2.6-x86_64_common64|grsync|1.2.6-x86_64_common64||BuildingBlock|260||grsync-1.2.6-x86_64_common64.pet|+rsync|rsync frontend|common64|||
