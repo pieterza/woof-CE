@@ -187,14 +187,13 @@ yes|blueman|blueman|exe,dev,doc,nls||deps:yes
 yes|bluez|bluez,bluez-obexd|exe,dev,doc,nls||deps:yes
 yes|breeze-cursor-theme|breeze-cursor-theme|exe,dev,doc,nls||deps:yes
 yes|connman|connman|exe,dev,doc,nls||deps:yes
-yes|chromium|chromium|exe,dev,doc,nls||deps:yes
 yes|cups|cups,cups-bsd,printer-driver-cups-pdf,foomatic-db-compressed-ppds,libcups2-dev|exe,dev,doc,nls||deps:yes
 yes|dbus-x11|dbus-x11|exe,dev,doc,nls||deps:yes
 yes|debconf|debconf|exe,dev,doc,nls
 yes|deadbeef-deps|libjansson-dev,libmpg123-dev,libcddb2-dev,libcdio-paranoia-dev|exe,dev,doc,nls||deps:yes
 yes|dkms|dkms|exe,dev>exe,doc,nls||deps:yes
 yes|epdfview-deps|libpoppler-glib-dev|exe,dev,doc,nls||deps:yes
-no|firefox-esr|firefox-esr|exe,dev>null,doc>null,nls||deps:yes
+yes|firefox-esr|firefox-esr|exe,dev>null,doc>null,nls||deps:yes
 yes|flatpak|flatpak|exe,dev,doc,nls||deps:yes
 yes|fonts-dejavu-core|fonts-dejavu-core|exe>null,dev>null,doc>null,nls>null
 yes|fonts-liberation2|fonts-liberation2|exe,dev,doc,nls||deps:yes
