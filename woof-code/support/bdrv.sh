@@ -127,6 +127,7 @@ esac
 cat << EOF > bdrv/etc/apt/apt.conf.d/00puppy
 APT::Install-Recommends "false";
 APT::Install-Suggests "false";
+APT::Autoremove::SuggestsImportant "false";
 EOF
 chroot bdrv apt-get update
 chroot bdrv apt-get upgrade -y
@@ -172,7 +173,7 @@ while read PROG; do
 	PROG=\${PROG##*/}
 	echo "Auto-configuring \$PROG to run as spot ..."
 	PROGS="\$PROGS \$PROG=true"
-done < <(grep -hE '^/usr/bin/(firefox|firefox-[a-z]+|google-chrome-[a-z]+|chromium|chromium-browser|vivaldi-[a-z]+|brave-browser|microsoft-edge-[a-z]+|transmission-gtk|transmission-cli|transmission-daemon|seamonkey|sylpheed|claws-mail|thunderbird|vlc|steam|code|librewolf|hexchat|zoom)$' /var/lib/dpkg/info/*.list)
+done < <(grep -hE '^(/usr/bin/(firefox|firefox-[a-z]+|google-chrome-[a-z]+|chromium|chromium-browser|vivaldi-[a-z]+|brave-browser|microsoft-edge-[a-z]+|transmission-gtk|transmission-cli|transmission-daemon|seamonkey|sylpheed|claws-mail|thunderbird|vlc|steam|code|librewolf|hexchat|zoom))|/usr/games/steam$' /var/lib/dpkg/info/*.list)
 
 [ -n "\$PROGS" ] && setup-spot \$PROGS
 
@@ -255,6 +256,9 @@ else
 fi
 ln -s realpath-FULL bdrv/usr/bin/realpath
 
+# steam needs this
+ln -s sha256sum-FULL bdrv/usr/bin/sha256sum
+
 # open .deb files with gdebi
 if [ -e rootfs-complete/usr/local/bin/rox ]; then
 	mkdir -p bdrv/etc/xdg/rox.sourceforge.net/MIME-types
@@ -277,6 +281,8 @@ for DESKTOP in gpkgdialog.desktop Xpkgdialog.desktop pkgdialog.desktop petget.de
 		done < rootfs-complete/usr/share/applications/$DESKTOP
 	) > bdrv/usr/share/applications/$DESKTOP
 done
+sed 's/^Name=.*/& (Legacy)/' ../rootfs-skeleton/usr/share/applications/Puppy-package-manager.desktop > bdrv/usr/share/applications/Puppy-package-manager.desktop
+sed -i -e 's/^Name=.*/Name=Puppy Package Installer/' -e 's~^MimeType=.*~MimeType=application/pet;~' bdrv/usr/share/applications/petget.desktop
 if [ -e rootfs-complete/usr/share/applications/mimeapps.list ]; then
 	(
 		while read LINE; do

@@ -61,7 +61,7 @@ yes|dash|dash|exe,dev,doc,nls||deps:yes
 yes|dbus|dbus,libdbus-1-dev|exe,dev,doc,nls||deps:yes
 yes|dbus-x11|dbus-x11|exe,dev,doc,nls||deps:yes
 yes|d-conf|dconf-gsettings-backend,dconf-service|exe,dev,doc,nls||deps:yes #needed by gsettings-desktop-settings
-yes|deadbeef-deps|libjansson-dev,libmpg123-dev,libcddb2-dev,libcdio-paranoia-dev|exe,dev,doc,nls||deps:yes
+yes|deadbeef-deps|libjansson-dev,libmpg123-dev,libcddb2-dev,libcdio-paranoia-dev,libfaad-dev|exe,dev,doc,nls||deps:yes
 yes|debconf|debconf|exe,dev,doc,nls
 yes|debianutils|debianutils|exe,dev,doc,nls||deps:yes
 yes|dialog|dialog|exe,dev>null,doc,nls||deps:yes
@@ -181,7 +181,7 @@ yes|wget|wget|exe,dev>null,doc,nls||deps:yes
 yes|wireless-tools|wireless-tools,libiw30,libiw-dev|exe,dev,doc,nls||deps:yes
 yes|wpa_supplicant|wpasupplicant|exe,dev>null,doc,nls||deps:yes
 yes|xdg-utils|xdg-utils|exe,dev,doc,nls||deps:yes
-yes|xorg_dri|libgl1-mesa-dri,mesa-utils|exe,dev,doc,nls||deps:yes
+yes|xorg_dri|libgl1-mesa-dri,mesa-vulkan-drivers,mesa-utils|exe,dev,doc,nls||deps:yes
 yes|xournalpp-deps|libsndfile1-dev,portaudio19-dev,libzip-dev|exe,dev,doc,nls||deps:yes
 yes|xz|xz-utils,liblzma5,liblzma-dev|exe,dev,doc,nls||deps:yes
 yes|zip|zip|exe,dev>null,doc,nls||deps:yes

@@ -460,11 +460,18 @@ fi
 mv -f sandbox3/rootfs-complete/{*.xpm,*.png} sandbox3/rootfs-complete/usr/share/pixmaps 2>/dev/null
 
 # busybox applets...
-if [ ! -f packages-${DISTRO_FILE_PREFIX}/busybox/bin/busybox.lst ] ; then
+if [ ! -f packages-${DISTRO_FILE_PREFIX}/busybox/bin/busybox.lst -a ! -f packages-${DISTRO_FILE_PREFIX}/busybox/usr/bin/busybox.lst ] ; then
 	echo "Please use the 'official' woofce busybox .pet package.."
 	exit 1
 fi
-cp -a -f packages-${DISTRO_FILE_PREFIX}/busybox/bin/busybox* ./sandbox3/rootfs-complete/bin/
+if [ -f packages-${DISTRO_FILE_PREFIX}/busybox/usr/bin/busybox ]; then
+	cp -a -f packages-${DISTRO_FILE_PREFIX}/busybox/usr/bin/busybox ./sandbox3/rootfs-complete/bin/
+else
+	cp -a -f packages-${DISTRO_FILE_PREFIX}/busybox/bin/busybox* ./sandbox3/rootfs-complete/bin/
+fi
+
+[ "$USR_SYMLINKS" = "yes" ] && usrmerge sandbox3/rootfs-complete 1
+
 ./support/busybox_symlinks.sh sandbox3/rootfs-complete
 
 [ -f /tmp/rootfs_pkgs_pinstall.sh ] && cat /tmp/rootfs_pkgs_pinstall.sh >> sandbox3/pinstall.sh
@@ -502,7 +509,7 @@ chmod 755 sandbox3/pinstall.sh
 #pemasu start 131207
 echo "Removing extra documentation"
 for i in $(ls sandbox3/rootfs-complete/usr/share/doc); do
-	case $i in legal|pmusic|pburn|pbackup|mtpaint|help|wvdial|ffconvert|cups|nls|puplogos|notecase|didiwiki|xarchive|frugalpup)
+	case $i in legal|pmusic|pburn|pbackup|mtpaint|help|wvdial|ffconvert|cups|nls|puplogos|notecase|didiwiki|xarchive|frugalpup|network_imgs)
 		continue
 	esac
 	if [ -d sandbox3/rootfs-complete/usr/share/doc/$i ] ; then
@@ -863,6 +870,8 @@ if [ $CROSSBUILD -eq 0 -o -n "$QEMU" ];then
 	# 'chooselocale' is called from /etc/rc.d/rc.country at first boot and
 	# pre-creating this table speeds things up. 111123
 	chroot rootfs-complete /usr/sbin/chooselocale composeonly
+	chroot rootfs-complete localedef -f ISO-8859-1 -i en_US --no-archive en_US
+	chroot rootfs-complete localedef -f UTF-8 -i en_US --no-archive en_US.utf8
 else
 	#*** cross-build
 	touch rootfs-complete/etc/gtk-2.0/gtk.immodules
@@ -1089,7 +1098,6 @@ fi
 
 if [ "$BUILD_SFS" = 'yes' ]; then
 	sh $MWD/support/files2delete.sh rootfs-complete
-	[ "$USR_SYMLINKS" = "yes" ] && usrmerge rootfs-complete 1
 
 	if [ "$BUILD_BDRV" = 'yes' ]; then
 		case $DISTRO_BINARY_COMPAT in debian|devuan|ubuntu)
