@@ -317,10 +317,10 @@ yes|streamripper|streamripper|exe,dev||deps:yes
 yes|tas||exe,nls
 yes|UrxvtControl||exe,dev
 yes|uextract||exe,dev
-yes|dvdauthor|dvdauthor|exe,dev>null,doc,nls||deps:yes #pburn dependency
-yes|dvd+rwtools|dvd+rw-tools,genisoimage,growisofs|exe,dev>null,doc,nls||deps:yes #pburn dependency
-yes|vamps|vamps|exe,dev,doc,nls||deps:yes #pburn dependency
-yes|vobcopy|vobcopy|exe,dev,doc,nls||deps:yes #pburn dependency
+no|dvdauthor|dvdauthor|exe,dev>null,doc,nls||deps:yes #pburn dependency
+no|dvd+rwtools|dvd+rw-tools,genisoimage,growisofs|exe,dev>null,doc,nls||deps:yes #pburn dependency
+no|vamps|vamps|exe,dev,doc,nls||deps:yes #pburn dependency
+no|vobcopy|vobcopy|exe,dev,doc,nls||deps:yes #pburn dependency
 yes|wmctrl|wmctrl|exe,dev,doc,nls||deps:yes
 "
 fi

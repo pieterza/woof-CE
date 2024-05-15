@@ -5,5 +5,7 @@
 <Tray autohide="bottom" insert="right" layer="above" halign="center" height="30" layout="horizontal" >
     <Spacer width="5" height="30"></Spacer>
     <TrayButton popup="Web Browser" border="false" icon="/usr/local/lib/X11/pixmaps/www48.png">exec:defaultbrowser</TrayButton>
+    <Spacer width="5" height="30"></Spacer>
+    <TrayButton popup="Terminal emulator" border="false" icon="/usr/local/lib/X11/pixmaps/console48.png">exec:defaultterminal</TrayButton>
 </Tray>
 </JWM>
