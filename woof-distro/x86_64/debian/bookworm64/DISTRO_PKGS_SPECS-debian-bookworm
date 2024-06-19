@@ -29,7 +29,7 @@ FALLBACKS_COMPAT_VERSIONS=''
 
 PKGS_SPECS_TABLE='
 yes|acl|libacl1|exe,dev,doc,nls||deps:yes
-yes|jami|jami|exe,dev,doc,nls||deps:yes
+no|jami|jami|exe,dev,doc,nls||deps:yes
 yes|adduser|adduser|exe,dev,doc,nls
 yes|alsa-lib|libasound2,libasound2-data,libasound2-dev,alsa-topology-conf,alsa-ucm-conf|exe,dev,doc,nls||deps:yes
 yes|alsa-utils|alsa-utils|exe,dev,doc,nls||deps:yes
@@ -193,30 +193,30 @@ yes|debconf|debconf|exe,dev,doc,nls
 yes|deadbeef-deps|libjansson-dev,libmpg123-dev,libcddb2-dev,libcdio-paranoia-dev,libfaad-dev|exe,dev,doc,nls||deps:yes
 yes|dkms|dkms|exe,dev>exe,doc,nls||deps:yes
 yes|epdfview-deps|libpoppler-glib-dev|exe,dev,doc,nls||deps:yes
-yes|firefox-esr|firefox-esr,firefox-esr-l10n-all|exe,dev>null,doc,nls>null||deps:yes
+no|firefox-esr|firefox-esr,firefox-esr-l10n-all|exe,dev>null,doc,nls>null||deps:yes
 yes|flatpak|flatpak|exe,dev,doc,nls||deps:yes
 yes|fonts-dejavu-core|fonts-dejavu-core|exe>null,dev>null,doc>null,nls>null
 yes|fonts-liberation2|fonts-liberation2|exe,dev,doc,nls||deps:yes
 yes|fonts-noto|fonts-noto-core,fonts-noto-mono,fonts-noto-cjk,fonts-noto-color-emoji|exe,dev,doc,nls||deps:yes
 yes|gpart|gpart|exe,dev,doc,nls||deps:yes
-yes|gparted-deps|libgtkmm-3.0-dev,libparted-dev|exe,dev,doc,nls||deps:yes
+no|gparted-deps|libgtkmm-3.0-dev,libparted-dev|exe,dev,doc,nls||deps:yes
 yes|groff|groff,groff-base|exe,dev,doc,nls||deps:yes
 yes|hardinfo-deps|libjson-glib-dev|exe,dev,doc,nls||deps:yes
 yes|libfuse2|libfuse2|exe,dev,doc,nls||deps:yes # used by AppImages
 yes|libva|vainfo,va-driver-all|exe,dev,doc,nls||deps:yes
-yes|man-db|man-db|exe,dev,doc,nls||deps:yes
+no|man-db|man-db|exe,dev,doc,nls||deps:yes
 yes|make|make|exe,dev,doc,nls||deps:yes
 yes|netpbm|netpbm|exe,dev,doc,nls||deps:yes # dependency of wl_colpick
 yes|notification-daemon|notification-daemon|exe>null,dev>null,doc>null,nls>null
 yes|nscd|unscd|exe||deps:yes
 yes|ntpdate|ntpdate|exe,dev>exe,doc,nls||deps:yes #used by psync to sync local time and date from the internet.
 yes|numix-gtk-theme|numix-gtk-theme|exe,dev,doc,nls||deps:yes
-yes|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
+no|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
 yes|patch|patch|exe,dev,doc,nls||deps:yes
 yes|pipewire|pipewire-pulse,pipewire-alsa,libspa-0.2-bluetooth,libpipewire-0.3-dev|exe,dev,doc,nls||deps:yes
 yes|putty|putty|exe,dev,doc,nls||deps:yes
-yes|python|python-is-python3,python3|exe,dev,doc,nls||deps:yes
-yes|python3-pkg-resources|python3-pkg-resources|exe,dev,doc,nls||deps:yes # dependency of gdebi
+no|python|python-is-python3,python3|exe,dev,doc,nls||deps:yes
+no|python3-pkg-resources|python3-pkg-resources|exe,dev,doc,nls||deps:yes # dependency of gdebi
 yes|rsync|rsync|exe,dev,doc,nls||deps:yes
 yes|sensible-utils|sensible-utils|exe,dev,doc,nls||deps:yes
 yes|xdg-desktop-portal-gtk|xdg-desktop-portal-gtk|exe,dev,doc,nls||deps:yes
@@ -283,24 +283,24 @@ fi
 #Dpup Bookworm64 extra apps/libs
 if [ "$DISTRO_VARIANT" != "retro" ]; then
 	PKGS_SPECS_TABLE="$PKGS_SPECS_TABLE
-yes|qpdfview|qpdfview,qpdfview-djvu-plugin,qpdfview-ps-plugin,qpdfview-pdf-poppler-plugin,qpdfview-translations|exe,dev,doc,nls||deps:yes #other requisite qt5 deps provided by simplescreenrecorder below
+no|qpdfview|qpdfview,qpdfview-djvu-plugin,qpdfview-ps-plugin,qpdfview-pdf-poppler-plugin,qpdfview-translations|exe,dev,doc,nls||deps:yes #other requisite qt5 deps provided by simplescreenrecorder below
 yes|qwinff|qwinff|exe,dev,doc,nls||deps:yes
-yes|simplescreenrecorder|simplescreenrecorder|exe,dev,doc,nls||deps:yes
+no|simplescreenrecorder|simplescreenrecorder|exe,dev,doc,nls||deps:yes
 yes|diffuse|diffuse|exe,dev,doc,nls||deps:yes
 yes|easytag|easytag|exe,dev,doc,nls||deps:yes
 yes|ffmpeg|ffmpeg|exe,dev,doc,nls||deps:yes
 #yes|frugalpup||exe,dev,doc,nls
-yes|gftp|gftp-gtk|exe,dev>null,doc,nls||deps:yes
+no|gftp|gftp-gtk|exe,dev>null,doc,nls||deps:yes
 yes|grub4dos||exe,dev>null,doc,nls
 yes|guvcview|guvcview|exe,dev,doc,nls||deps:yes
-yes|htop|htop|exe,dev>null,doc,nls||deps:yes
-yes|isomaster|isomaster|exe,dev,doc,nls||deps:yes
+no|htop|htop|exe,dev>null,doc,nls||deps:yes
+no|isomaster|isomaster|exe,dev,doc,nls||deps:yes
 yes|libdbus-glib|libdbus-glib-1-2|exe,dev,doc,nls||deps:yes #dependency of firefox_esr portable
 yes|ListDD||exe,dev,doc,nls
 yes|mhwaveedit|mhwaveedit|exe,dev>null,doc,nls||deps:yes
 yes|mpv|mpv|exe,dev,doc,nls||deps:yes
 yes|celluloid|celluloid|exe,dev,doc,nls||deps:yes
-yes|PackIt||exe,dev
+no|PackIt||exe,dev
 yes|parcellite|parcellite|exe,dev>null,doc,nls||deps:yes
 yes|peasydiff||exe
 yes|peasyglue||exe,dev
