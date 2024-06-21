@@ -34,7 +34,6 @@ no|jami|jami|exe,dev,doc,nls||deps:yes
 yes|adduser|adduser|exe,dev,doc,nls
 yes|alsa-lib|libasound2,libasound2-data,libasound2-dev,alsa-topology-conf,alsa-ucm-conf|exe,dev,doc,nls||deps:yes
 yes|alsa-utils|alsa-utils|exe,dev,doc,nls||deps:yes
-yes|pulseaudio|pulseaudio,libpulse0,libpulse-dev,pulseaudio-utils,pulseaudio-module-bluetooth|exe,dev,doc,nls||deps:yes
 yes|atk|libatk1.0-0,libatk1.0-dev|exe,dev,doc,nls||deps:yes
 yes|at-spi2-atk|libatspi2.0-0,libatk-bridge2.0-0,libatk-bridge2.0-dev,libatspi2.0-dev|exe,dev,doc,nls||deps:yes #needed by gtk+3.
 yes|base-files|base-files|exe>null,dev>null,doc>null,nls>null
