@@ -8,7 +8,7 @@ on:
       name:
         description: 'Human-readable name'
         required: true
-        default: 'JammyPup64 CE'
+        default: 'CCS-DISTRO'
       version:
         description: 'Version number'
         required: true
@@ -24,19 +24,19 @@ on:
       compat-distro:
         description: 'Compatible distro'
         required: false
-        default: 'ubuntu'
+        default: 'debian'
       compat-distro-version:
         description: 'Compatible distro version'
         required: false
-        default: 'jammy64'
+        default: 'bookworm64'
       kernel:
         description: 'Kernel version'
         required: false
-        default: '5.15.x'
+        default: '6.6.x'
       prefix:
         description: 'File name prefix'
         required: false
-        default: 'jammypup64ce'
+        default: 'ccs64ce'
       release:
         type: boolean
         description: 'Upload release draft'
