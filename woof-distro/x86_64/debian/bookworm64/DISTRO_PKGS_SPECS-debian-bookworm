@@ -1,5 +1,6 @@
 #fallbacks when looking for pkgs (space-separated list)...
 FALLBACKS_COMPAT_VERSIONS=''
+DISTRO_VARIANT='retro'
 
 #PKGS_SPECS_TABLE table format:
 #will pkg be in puppy-build.
