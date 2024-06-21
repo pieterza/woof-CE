@@ -171,8 +171,10 @@ if [ "$DISTRO_VARIANT" = "retro" ]; then
 yes|binutils|binutils|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|dhcpcd|dhcpcd|exe,dev,doc,nls||deps:yes
 yes|dejavu_fonts|fonts-dejavu-core|exe,dev,doc,nls||deps:yes
+yes|debianutils|debianutils|exe,dev,doc,nls||deps:yes
 no|gcc|gcc|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|groff|groff-base|exe,dev,doc,nls||deps:yes
+yes|wireplumber|wireplumber|exe,dev,doc,nls||deps:yes
 yes|make|make|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|patch|patch|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|pipewire|pipewire-pulse,pipewire-alsa,libpipewire-0.3-dev|exe,dev,doc,nls||deps:yes
