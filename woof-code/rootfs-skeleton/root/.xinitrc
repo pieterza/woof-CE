@@ -59,7 +59,7 @@ if [ -e /usr/bin/wireplumber ] || [ -e /usr/bin/pipewire-media-session ]; then
         run-as-spot pipewire-pulse &
 	
 	if [ -e /usr/bin/wireplumber ]; then
-         run-as-spot wireplumber &
+         run-as-spot dbus-run-session wireplumber &
 	else
 	 run-as-spot pipewire-media-session &
 	fi

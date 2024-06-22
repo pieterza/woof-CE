@@ -30,7 +30,7 @@ DISTRO_VARIANT='retro'
 
 PKGS_SPECS_TABLE='
 yes|acl|libacl1|exe,dev,doc,nls||deps:yes
-yes|jami|jami|exe,dev,doc,nls||deps:yes
+yes|jami|jami|jami-daemon|exe,dev,doc,nls||deps:yes
 yes|adduser|adduser|exe,dev,doc,nls
 yes|alsa-lib|libasound2,libasound2-data,libasound2-dev,alsa-topology-conf,alsa-ucm-conf|exe,dev,doc,nls||deps:yes
 yes|alsa-utils|alsa-utils|exe,dev,doc,nls||deps:yes
