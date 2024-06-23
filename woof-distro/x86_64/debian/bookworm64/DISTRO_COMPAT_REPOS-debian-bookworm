@@ -40,7 +40,7 @@ REPOS_DISTRO_COMPAT="
 z|https://http.us.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 z|https://mirrors.kernel.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 z|https://ftp.de.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
-z|https://dl.jami.net/nightly/debian_12/|Packages-*
+z|https://dl.jami.net/nightly/debian_12/|Packages-jami-*
 "
 
 
