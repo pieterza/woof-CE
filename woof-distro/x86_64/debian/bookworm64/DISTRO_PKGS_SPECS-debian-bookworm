@@ -84,6 +84,8 @@ yes|icu|libicu72,libicu-dev|exe,dev,doc,nls||deps:yes #scribus needs this though
 yes|init-system-helpers|init-system-helpers|exe>null,dev>null,doc,nls||deps:yes #to prevent it from being installed as dependency..
 yes|iptables|iptables,libip4tc2,libip6tc2,libxtables12,libnftnl11|exe,dev>exe,doc,nls||deps:yes
 yes|iw|iw|exe,dev,doc,nls||deps:yes
+yes|apt|apt|exe,dev,doc,nls||deps:yes # test
+yes|libblas-3|libblas-3|exe,dev,doc,nls||deps:yes #jamid test
 yes|jq|jq,libjq1|exe,dev,doc,nls||deps:yes
 yes|kmod|kmod,libkmod2,libkmod-dev|exe,dev,doc,nls||deps:yes #er, no, looks like compiled without gzip support --but i think only need that in initrd, where already have old modprobe.
 yes|less|less|exe,dev>null,doc,nls||deps:yes
