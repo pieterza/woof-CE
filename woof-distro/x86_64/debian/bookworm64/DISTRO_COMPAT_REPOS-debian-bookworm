@@ -25,9 +25,9 @@ z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/main/binary-$
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free-firmware/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free-firmware
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/contrib/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-contrib
-z|https://dl.jami.net/nightly/debian_12/dists/jami/main/binary-amd64/Packages.gz|Packages-jami-main-binary-amd64-*
 "
 
+#z|https://dl.jami.net/nightly/debian_12/dists/jami/main/binary-amd64/Packages.gz|Packages-jami-main-binary-amd64-*
 #-------------------
 #REPOS_DISTRO_COMPAT - hardcode the compat-distro repos in here...
 #-------------------
