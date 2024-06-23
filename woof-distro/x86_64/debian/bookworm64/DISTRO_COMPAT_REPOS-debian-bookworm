@@ -25,7 +25,7 @@ z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/main/binary-$
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free-firmware/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free-firmware
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/contrib/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-contrib
-z|https://dl.jami.net/nightly/debian_12/dists/jami/main/binary-amd64/Packages.gz|Packages-jami-main-binary-amd64-*
+z|https://dl.jami.net/nightly/debian_12/dists/jami/main/binary-amd64/Packages.gz|Packages-debian_12-jami-main-binary-amd64-*
 "
 
 #-------------------
@@ -40,7 +40,7 @@ REPOS_DISTRO_COMPAT="
 z|https://http.us.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 z|https://mirrors.kernel.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 z|https://ftp.de.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
-z|https://dl.jami.net/nightly/debian_12/|Packages-jami-*
+z|https://dl.jami.net/nightly/debian_12/|Packages-debian_12-jami-*
 "
 
 
@@ -50,3 +50,5 @@ z|https://dl.jami.net/nightly/debian_12/|Packages-jami-*
 PKG_DOCS_DISTRO_COMPAT="$(echo $PKG_DOCS_DISTRO_COMPAT)"
 REPOS_DISTRO_COMPAT="$(echo $REPOS_DISTRO_COMPAT)"
 
+#https://dl.jami.net/stable/debian_12/dists/jami/main/binary-amd64/
+#https://http.us.debian.org/debian/dists/bullseye/main/binary-amd64/
