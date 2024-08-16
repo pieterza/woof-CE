@@ -176,6 +176,7 @@ no|gcc|gcc|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|groff|groff-base|exe,dev,doc,nls||deps:yes
 yes|wireplumber|wireplumber|exe,dev,doc,nls||deps:yes
 yes|jami|jami-all|exe,dev,doc,nls||deps:yes
+yes|firefox-esr|firefox-esr,firefox-esr-l10n-all|exe,dev,doc,nls||deps:yes
 yes|make|make|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|patch|patch|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|pipewire|pipewire-pulse,pipewire-alsa,libpipewire-0.3-dev|exe,dev,doc,nls||deps:yes
@@ -197,7 +198,6 @@ yes|debconf|debconf|exe,dev,doc,nls
 yes|deadbeef-deps|libjansson-dev,libmpg123-dev,libcddb2-dev,libcdio-paranoia-dev,libfaad-dev|exe,dev,doc,nls||deps:yes
 no|dkms|dkms|exe,dev>exe,doc,nls||deps:yes
 no|epdfview-deps|libpoppler-glib-dev|exe,dev,doc,nls||deps:yes
-yes|firefox-esr|firefox-esr,firefox-esr-l10n-all|exe,dev,doc,nls||deps:yes
 no|flatpak|flatpak|exe,dev,doc,nls||deps:yes
 yes|fonts-dejavu-core|fonts-dejavu-core|exe>null,dev>null,doc>null,nls>null
 yes|fonts-liberation2|fonts-liberation2|exe,dev,doc,nls||deps:yes
