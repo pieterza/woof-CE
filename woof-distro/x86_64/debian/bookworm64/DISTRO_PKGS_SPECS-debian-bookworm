@@ -31,7 +31,6 @@ DISTRO_VARIANT='retro'
 PKGS_SPECS_TABLE='
 yes|acl|libacl1|exe,dev,doc,nls||deps:yes
 yes|adduser|adduser|exe,dev,doc,nls
-#yes|jami|jami|exe,dev,doc,nls||compat:jami
 yes|alsa-lib|libasound2,libasound2-data,libasound2-dev,alsa-topology-conf,alsa-ucm-conf|exe,dev,doc,nls||deps:yes
 yes|alsa-utils|alsa-utils|exe,dev,doc,nls||deps:yes
 yes|atk|libatk1.0-0,libatk1.0-dev|exe,dev,doc,nls||deps:yes
@@ -198,7 +197,7 @@ yes|debconf|debconf|exe,dev,doc,nls
 yes|deadbeef-deps|libjansson-dev,libmpg123-dev,libcddb2-dev,libcdio-paranoia-dev,libfaad-dev|exe,dev,doc,nls||deps:yes
 no|dkms|dkms|exe,dev>exe,doc,nls||deps:yes
 no|epdfview-deps|libpoppler-glib-dev|exe,dev,doc,nls||deps:yes
-yes|firefox-esr|firefox-esr,firefox-esr-l10n-all|exe,dev>null,doc,nls>null||deps:yes
+yes|firefox-esr|firefox-esr,firefox-esr-l10n-all|exe,dev,doc,nls||deps:yes
 no|flatpak|flatpak|exe,dev,doc,nls||deps:yes
 yes|fonts-dejavu-core|fonts-dejavu-core|exe>null,dev>null,doc>null,nls>null
 yes|fonts-liberation2|fonts-liberation2|exe,dev,doc,nls||deps:yes
