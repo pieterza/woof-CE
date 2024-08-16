@@ -176,8 +176,7 @@ yes|debianutils|debianutils|exe,dev,doc,nls||deps:yes
 no|gcc|gcc|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|groff|groff-base|exe,dev,doc,nls||deps:yes
 yes|wireplumber|wireplumber|exe,dev,doc,nls||deps:yes
-#yes|jami|jami-all|exe,dev,doc,nls||deps:yes
-yes|linphone|linphone-desktop|exe,dev>null,doc>null,nls>null||deps:yes
+yes|jami|jami-all|exe,dev,doc,nls||deps:yes
 yes|make|make|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|patch|patch|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|pipewire|pipewire-pulse,pipewire-alsa,libpipewire-0.3-dev|exe,dev,doc,nls||deps:yes
