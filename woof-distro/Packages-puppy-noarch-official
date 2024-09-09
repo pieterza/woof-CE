@@ -89,6 +89,7 @@ frisbee-1.4.4|frisbee|1.4.4||Network|280K||frisbee-1.4.4.pet|+gtkdialog&ge0.8.4|
 frugalpup-41|frugalpup|41||Setup|3280K||frugalpup-41.pet||FrugalPup - flexible frugal installer||||
 get_libreoffice-0.43|get_libreoffice|0.43||Document|82K||get_libreoffice-0.43.pet||Get LibreOffice download and install LibreOffice||||
 grub2_efi-2.02.2018.08-fd64|grub2_efi|2.02.2018.08-fd64||BuildingBlock|5588||grub2_efi-2.02.2018.08-fd64.pet||No description provided||||
+grub2config-2.0.9|grub2config|2.0.9||Setup|2644K||grub2config-2.0.9.pet||Grub2 bootloader config||||
 grub4dos-0.4.4.v1.9.4|grub4dos|0.4.4.v1.9.4||System|480K||grub4dos-0.4.4.v1.9.4.pet||Grub4Dos bootloader config||precise||
 grub4dos_u-0.4.4.v1.9.4|grub4dos_u|0.4.4.v1.9.4||System|476K||grub4dos_u-0.4.4.v1.9.4.pet||Grub4Dos bootloader config||||
 gtk_theme_ShallowThought-0.2|gtk_theme_ShallowThought|0.2||BuildingBlock|224K||gtk_theme_ShallowThought-0.2.pet||gtk desktop theme||||
@@ -175,7 +176,6 @@ peasyglue-2.0|peasyglue|2.0||Graphic|68K||peasyglue-2.0.pet||Image joiner||||
 peasypdf-4.2|peasypdf|4.2||Document|56K||peasypdf-4.2.pet||Manipulate PDF documents||||
 peasyport-2.8w|peasyport|2.8w||BuildingBlock|48||peasyport-2.8w.pet||No description provided||||
 peasyprint-3.0|peasyprint|3.0||Graphic|48K||peasyprint-3.0.pet||PeasyPrint graphic/photo printing||||
-peasyscale-2.0|peasyscale|2.0||Graphic|68K||peasyscale-2.0.pet||graphic resizer|slackware|14.0||
 peasyscan-2.12|peasyscan|2.12||Graphic|172K||peasyscan-2.12.pet||PeasyScan simple image scanner|slackware|14.0||
 peasywifi-4.5|peasywifi|4.5||Network|136K||peasywifi-4.5.pet||Reliable WiFi connection manager|slackware|14.0||
 pequalizer-1.0.0|pequalizer|1.0.0||Multimedia|76K||pequalizer-1.0.0.pet|+alsaequal,+caps|pequalizer Graphical Equalizer||||
