@@ -22,8 +22,10 @@ PCILIST="$(busybox lspci 2>/dev/null)"
 
 if [ -e /etc/keymap.conf ]; then
  KBSELECT="$(cat /etc/keymap.conf | head -n 1)"
+ [ -f ~/.xkbrc ] && sed -i "/^XKB_DEFAULT_LAYOUT=/ c XKB_DEFAULT_LAYOUT=${KBSELECT}" ~/.xkbrc
 elif [ -e /etc/keymap ]; then
  KBSELECT="$(cat /etc/keymap | head -n 1)"
+ [ -f ~/.xkbrc ] && sed -i "/^XKB_DEFAULT_LAYOUT=/ c XKB_DEFAULT_LAYOUT=${KBSELECT}" ~/.xkbrc
 else
  KBSELECT="us"
 fi
