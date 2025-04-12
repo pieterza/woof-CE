@@ -215,7 +215,7 @@ yes|notification-daemon|notification-daemon|exe>null,dev>null,doc>null,nls>null
 yes|nscd|unscd|exe||deps:yes
 yes|ntpdate|ntpdate|exe,dev>exe,doc,nls||deps:yes #used by psync to sync local time and date from the internet.
 yes|numix-gtk-theme|numix-gtk-theme|exe,dev,doc,nls||deps:yes
-no|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
+yes|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
 yes|patch|patch|exe,dev,doc,nls||deps:yes
 yes|pipewire|pipewire-pulse,pipewire-alsa,libspa-0.2-bluetooth,libpipewire-0.3-dev|exe,dev,doc,nls||deps:yes
 no|putty|putty|exe,dev,doc,nls||deps:yes
