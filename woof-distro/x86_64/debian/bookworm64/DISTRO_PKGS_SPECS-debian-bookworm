@@ -170,6 +170,7 @@ if [ "$DISTRO_VARIANT" = "retro" ]; then
 	PKGS_SPECS_TABLE="$PKGS_SPECS_TABLE
 yes|binutils|binutils|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|dhcpcd|dhcpcd|exe,dev,doc,nls||deps:yes
+yes|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
 yes|dejavu_fonts|fonts-dejavu-core|exe,dev,doc,nls||deps:yes
 yes|debianutils|debianutils|exe,dev,doc,nls||deps:yes
 no|gcc|gcc|exe>dev,dev,doc>dev,nls>dev||deps:yes
@@ -296,7 +297,7 @@ yes|ffmpeg|ffmpeg|exe,dev,doc,nls||deps:yes
 #yes|frugalpup||exe,dev,doc,nls
 no|gftp|gftp-gtk|exe,dev>null,doc,nls||deps:yes
 yes|grub4dos||exe,dev>null,doc,nls
-yes|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
+no|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
 yes|guvcview|guvcview|exe,dev,doc,nls||deps:yes
 no|htop|htop|exe,dev>null,doc,nls||deps:yes
 no|isomaster|isomaster|exe,dev,doc,nls||deps:yes
