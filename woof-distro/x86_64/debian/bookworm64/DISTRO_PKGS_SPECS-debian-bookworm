@@ -171,6 +171,8 @@ if [ "$DISTRO_VARIANT" = "retro" ]; then
 yes|binutils|binutils|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|dhcpcd|dhcpcd|exe,dev,doc,nls||deps:yes
 yes|openssh-client|openssh-client|exe,dev,doc,nls||deps:yes
+yes|openssh-server|openssh-server|exe,dev,doc,nls||deps:yes
+yes|mysql-client|mysql-client|exe,dev,doc,nls||deps:yes
 yes|dejavu_fonts|fonts-dejavu-core|exe,dev,doc,nls||deps:yes
 yes|debianutils|debianutils|exe,dev,doc,nls||deps:yes
 no|gcc|gcc|exe>dev,dev,doc>dev,nls>dev||deps:yes
