@@ -12,4 +12,4 @@ cp /etc/ccs/jwm* /root/.jwm/
 echo "Setting wallpaper"
 set_bg /etc/ccs/wall.svg
 echo "Configuring SIP extentions..."
-/etc/ccs/sip_config.sh
+/etc/ccs/sipconfig.sh
