@@ -195,6 +195,7 @@ which $CURRENTWM && exec $CURRENTWM
 [ -x $CURRENTWM ] && exec $CURRENTWM
 [ "$desktop" = "rox" ] && exec jwm
 
+sh /etc/ccs/sipconfig.sh
 set_wallpaper /etc/ccs/wall.svg
 
 ###END###
