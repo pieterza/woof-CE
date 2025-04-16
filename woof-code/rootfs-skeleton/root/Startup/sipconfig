@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sh /etc/ccs/sipconfig.sh > /tmp/sconf

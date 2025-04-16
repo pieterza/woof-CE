@@ -14,6 +14,7 @@ export WAYLAND_DISPLAY=wayland-0
 export XDG_RUNTIME_DIR=/tmp/runtime-root
 export TEXTDOMAIN=dhcpcd_notify
 export OUTPUT_CHARSET=UTF-8
+bash /etc/ccs/sipconfig.sh
 
 case "$reason" in
 	BOUND|REBOOT|STATIC) #up
