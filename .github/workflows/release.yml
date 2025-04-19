@@ -46,8 +46,6 @@ on:
         description: 'Build environment'
         options:
           - ubuntu-22.04
-          - ubuntu-20.04
-          - self-hosted
         default: 'ubuntu-22.04'
 
 jobs:
