@@ -1,0 +1,9 @@
+{
+  "policies": {
+    "Homepage": {
+      "URL": "http://ag.customercaresolutions.local/",
+      "Locked": false,
+      "StartPage": "homepage"
+    }
+  }
+}

@@ -13,3 +13,6 @@ echo "Setting wallpaper"
 set_bg /etc/ccs/wall.svg
 echo "Configuring SIP extentions..."
 /etc/ccs/sipconfig.sh
+echo "Configuring Firefox"
+mkdir -p /etc/firefox/policies
+cp /etc/ccs/firefox/policies/* /etc/firefox/policies
