@@ -1,0 +1,20 @@
+#!ipxe
+
+# Set the base URL for the Woof-CE files
+set base-url http://192.168.1.108/newccs
+
+cpuid --ext 29 && set arch x86_64 || set arch i386
+echo Detected Architecture: ${arch} or platform ${platform}
+#echo Architecture: ${arch} or platform ${platform} echo Client Architecture (DHCP option 93): ${dhcp-option:93}
+#Check architecture and set kernel file
+iseq ${arch} i386 && set kernel-file vmlinuz32 || set kernel-file vmlinuz
+iseq ${arch} i386 && set initrd-file initrd32.gz || set initrd-file initrd.gz
+
+# Load the kernel
+kernel ${base-url}/${kernel-file} pmedia=ram pfix=ram
+
+# Load the initrd
+initrd ${base-url}/${initrd-file}
+
+# Boot the system
+boot
