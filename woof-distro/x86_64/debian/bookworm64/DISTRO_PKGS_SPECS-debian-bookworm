@@ -178,8 +178,7 @@ yes|debianutils|debianutils|exe,dev,doc,nls||deps:yes
 no|gcc|gcc|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|groff|groff-base|exe,dev,doc,nls||deps:yes
 yes|wireplumber|wireplumber|exe,dev,doc,nls||deps:yes
-yes|jami|jami-all,jami-daemon,jami-libclient|exe,dev,doc,nls||deps:yes
-yes|sipsak|sipsak|exe,dev,doc,nls||deps:yes
+yes|linphone-desktop|linphone-desktop|exe,dev,doc,nls||deps:yes
 yes|firefox-esr|firefox-esr,firefox-esr-l10n-all|exe,dev,doc,nls||deps:yes
 yes|make|make|exe>dev,dev,doc>dev,nls>dev||deps:yes
 yes|patch|patch|exe>dev,dev,doc>dev,nls>dev||deps:yes
