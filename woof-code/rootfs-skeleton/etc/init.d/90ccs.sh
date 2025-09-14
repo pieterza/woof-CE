@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo "Setting up SIP profile"
-mkdir -p /root/.config/jami
-cp /etc/ccs/dring.yml  /root/.config/jami/
+mkdir -p /root/.config/linphone
+cp /etc/ccs/linphonerc  /root/.config/linphone/
 echo "Overwriting jwm"
 rm -rf /root/.jwm
 cp -r /etc/ccs/.jwm /root

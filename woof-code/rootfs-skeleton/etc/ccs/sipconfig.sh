@@ -16,4 +16,4 @@ echo $EXTENTION >> /tmp/sipconf
 # TODO:
 
 echo "Changing extention to $EXTENTION"
-sed -i "s/username: .*/username: $EXTENTION/g" ~/.config/jami/dring.yml
+sed -i "s/username=.*/username=$EXTENTION/g" ~/.config/jami/dring.yml
