@@ -8,7 +8,7 @@
  
 <!-- IMPORTANT, ONLY EDIT /etc/xdg/templates/_root_.jwmrc -->
  
- 
+
  
  
 <!-- root menus for MOUSE activation -->
@@ -28,7 +28,9 @@
 <Menu label="CCS" icon="pc48.png" height="24">
 <Program label="Firefox ESR" icon="Internet.svg" tooltip="Browse the World Wide Web">/usr/lib/firefox-esr/firefox-esr</Program>
  <Separator/> 
-<Program label="Linphone" icon="linphone" tooltip="Privacy-oriented voice, video, chat, and conference platform">dbus-run-ression -- linphone</Program>
+<Program label="Linphone" icon="linphone" tooltip="Privacy-oriented voice, video, chat, and conference platform">dbus-run-session -- linphone</Program>
+ <Separator/>
+<Program label="lxterminal" icon="lxterminal" tooltip="terminal">lxterminal</Program>
  <Separator/> 
 </Menu>
 <Separator/>
