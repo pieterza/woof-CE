@@ -1,50 +1,36 @@
 [misc]
 log_collection_upload_server_url=https://www.linphone.org:444/lft.php
-prefer_basic_chat_room=1
-uuid=ea1ddbeb-2792-0008-8f1a-fb207f86dc30
+uuid=f80c1de3-9aa2-0047-9290-5104bc1b6d77
 hide_empty_chat_rooms=0
 
 [sound]
 ec_filter=MSWebRTCAEC
-playback_dev_id=PulseAudio Unknown: RDP Sink
-ringer_dev_id=PulseAudio Unknown: RDP Sink
-capture_dev_id=PulseAudio Unknown: RDP Source
-media_dev_id=PulseAudio Unknown: RDP Sink
+playback_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
+ringer_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
+capture_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
+media_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
 mic_gain_db=0.000000
 playback_gain_db=0.000000
 remote_ring=/usr/share/sounds/linphone/ringback.wav
 disable_record_on_mute=0
 
-[app]
-record_aware=1
-auto_download_incoming_files_max_size=10000000
-auto_download_incoming_voice_recordings=1
-auto_download_incoming_icalendars=1
-sender_name_hidden_in_forward_message=0
+[net]
+nat_policy_ref=eYcyK0c~q~h-2fd
+friendlist_subscription_enabled=1
+mtu=1300
 
-[rtp]
-accept_any_encryption=1
-audio_rtp_port=7078
-video_rtp_port=9078
-text_rtp_port=11078
-audio_jitt_comp=60
-video_jitt_comp=60
-nortp_timeout=30
-audio_adaptive_jitt_comp_enabled=1
-video_adaptive_jitt_comp_enabled=1
+[nat_policy_0]
+ref=eYcyK0c~q~h-2fd
 
 [sip]
-chat_messages_aggregation_delay=1000
-chat_messages_aggregation=1
-zrtp_key_agreements_suites=MS_ZRTP_KEY_AGREEMENT_K255_KYB512
 root_ca=/usr/share/linphone/rootca.pem
 verify_server_certs=1
 verify_server_cn=1
-contact=sip:pieters@unknown-host
+contact=sip:root@puppypc28726
 auto_send_ringing=1
 media_encryption=none
-supported=replaces, outbound, gruu, path, record-aware
-user_agent=Linphone Desktop/5.0.2 (PieterRyzen) Ubuntu 24.04.3 LTS, Qt 5.15.13 LinphoneCore/5.2.0
+supported=replaces, outbound, gruu
+user_agent=Linphone Desktop/4.4.10 (puppypc28726) CCS-DISTRO 999999999, Qt 5.15.8 LinphoneCore/5.1.65
 default_proxy=0
 guess_hostname=1
 inc_timeout=30
@@ -52,33 +38,24 @@ in_call_timeout=0
 delayed_timeout=4
 register_only_when_network_is_up=1
 register_only_when_upnp_is_ok=1
+use_ipv6=0
+
+[app]
+auto_download_incoming_files_max_size=10000000
+auto_download_incoming_voice_recordings=1
+auto_download_incoming_icalendars=1
+sender_name_hidden_in_forward_message=0
+record_aware=0
 
 [video]
-max_conference_size=vga
 displaytype=MSQOGL
 capture=1
 display=1
-main_display_mode=Hybrid
-other_display_mode=Hybrid
 size=vga
 
 [ui]
-use_qrcode=0
-rc_version=5
-
-[net]
-nat_policy_ref=WWwCrRZ79qUCFGH
-friendlist_subscription_enabled=1
-mtu=1300
-
-[nat_policy_0]
-ref=WWwCrRZ79qUCFGH
-
-[lime]
-enabled=1
-
-[account_creator]
-url=http://fs-test-sandbox.linphone.org/flexiapi/api/
+rc_version=3
+logs_enabled=1
 
 [audio_codec_0]
 mime=opus
@@ -204,12 +181,6 @@ mime=VP8
 rate=90000
 enabled=1
 
-[video_codec_1]
-mime=H264
-rate=90000
-enabled=1
-recv_fmtp=profile-level-id=42801F
-
 [proxy_default_values]
 avpf=0
 dial_escape_plus=0
@@ -228,15 +199,18 @@ username_max_length=128
 username_min_length=1
 username_regex=^[a-zA-Z0-9+_.\-]*$
 
+[nat_policy_1]
+ref=5cK4-HvTiEjlvvF
+
 [proxy_0]
-reg_proxy=<sip:sip.axxess.co.za;transport=udp>
-reg_identity=sip:0878217491@sip.axxess.co.za
+reg_proxy=<sip:192.168.0.126;transport=udp>
+reg_identity="ccssip" <sip:9987@192.168.0.126>
 quality_reporting_enabled=0
 quality_reporting_interval=0
 reg_expires=3600
 reg_sendregister=1
 publish=0
-avpf=0
+avpf=-1
 avpf_rr_interval=1
 dial_escape_plus=0
 use_dial_prefix_for_calls_and_chats=1
@@ -244,17 +218,22 @@ privacy=32768
 push_notification_allowed=0
 remote_push_notification_allowed=0
 cpim_in_basic_chat_rooms_enabled=0
-idkey=proxy_config_ft7HWE-fOULFgT2
-publish_expires=-1
-nat_policy_ref=o5H~65MnZEq9XU4
-rtp_bundle=0
-rtp_bundle_assumption=0
+idkey=proxy_config_hHcMmIsgfYp9FNL
+publish_expires=3600
+nat_policy_ref=5cK4-HvTiEjlvvF
 
-[nat_policy_1]
-ref=o5H~65MnZEq9XU4
+[rtp]
+audio_rtp_port=7078
+video_rtp_port=9078
+text_rtp_port=11078
+audio_jitt_comp=60
+video_jitt_comp=60
+nortp_timeout=30
+audio_adaptive_jitt_comp_enabled=1
+video_adaptive_jitt_comp_enabled=1
 
 [auth_info_0]
 username=9987
-ha1=a5cbf3394df37e15e0fd968760bbc034
+passwd=1234
 realm=192.168.0.126
 domain=192.168.0.126

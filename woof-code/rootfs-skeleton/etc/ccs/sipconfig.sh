@@ -16,4 +16,4 @@ echo $EXTENTION >> /tmp/sipconf
 # TODO:
 
 echo "Changing extention to $EXTENTION"
-sed -i "s/username=.*/username=$EXTENTION/g" ~/.config/linphone/linphonerc
+sed -i "s/9987/$EXTENTION/g" ~/.config/linphone/linphonerc
