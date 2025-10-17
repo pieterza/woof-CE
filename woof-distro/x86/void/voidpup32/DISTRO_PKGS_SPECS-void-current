@@ -300,7 +300,7 @@ yes|libpciaccess|libpciaccess|exe,dev,doc,nls
 yes|libpcre2|libpcre2|exe,dev,doc,nls
 yes|libpcrecpp|libpcrecpp|exe>dev,dev,doc,nls
 yes|libpng|libpng|exe,dev,doc,nls
-yes|libproxy|libproxy|exe,dev,doc,nls
+yes|libproxy|libproxy,duktape|exe,dev,doc,nls
 yes|libpsl|libpsl|exe,dev,doc,nls
 no|libpthread-stubs|libpthread-stubs|exe>dev,dev,doc,nls
 yes|libquadmath|libquadmath|exe,dev,doc,nls
