@@ -15,8 +15,12 @@ echo $FINAL_DIGIT >> /tmp/sipconf
 echo $EXTENTION >> /tmp/sipconf
 # TODO:
 
+cd /etc/ccs/
 echo "Changing extention to $EXTENTION"
 sed -i "s/9987/$EXTENTION/g" linphonerc
 mkdir -p /home/spot/.config/linphone
 cp linphonerc /home/spot/.config/linphone
+mkdir -p /root/.config/linphone
 chown spot:spot /home/spot/.config
+ln -s /home/spot/.config/linphone/linphonerc /root/.config/linphone/
+chown spot:spot /root/.config/linphone/linphonerc
