@@ -17,3 +17,6 @@ echo $EXTENTION >> /tmp/sipconf
 
 echo "Changing extention to $EXTENTION"
 sed -i "s/9987/$EXTENTION/g" ~/.config/linphone/linphonerc
+mkdir -p /home/spot/.config/linphone
+cp ~/.config/linphone/linphonerc /home/spot/.config/linphone
+chown spot:spot /home/spot/.config
