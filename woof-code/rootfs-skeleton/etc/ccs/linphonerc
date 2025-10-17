@@ -38,6 +38,7 @@ in_call_timeout=0
 delayed_timeout=4
 register_only_when_network_is_up=1
 register_only_when_upnp_is_ok=1
+ipv6_migration_done=1
 use_ipv6=0
 
 [app]

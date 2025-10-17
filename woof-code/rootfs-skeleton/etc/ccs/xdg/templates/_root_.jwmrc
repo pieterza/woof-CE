@@ -28,7 +28,7 @@
 <Menu label="CCS" icon="pc48.png" height="24">
 <Program label="Firefox ESR" icon="Internet.svg" tooltip="Browse the World Wide Web">/usr/lib/firefox-esr/firefox-esr</Program>
  <Separator/> 
-<Program label="Linphone" icon="linphone" tooltip="Privacy-oriented voice, video, chat, and conference platform">run-as-spot linphone</Program>
+<Program label="Linphone" icon="linphone" tooltip="Privacy-oriented voice, video, chat, and conference platform">run-as-spot linphone --config=/home/spot/.config/linphone/linphonerc</Program>
  <Separator/>
 <Program label="lxterminal" icon="lxterminal" tooltip="terminal">lxterminal</Program>
  <Separator/> 
