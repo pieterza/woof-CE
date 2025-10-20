@@ -2,7 +2,7 @@
 
 echo "Setting up SIP profile"
 mkdir -p /root/.config/linphone
-cp /etc/ccs/linphonerc  /root/.config/linphone/
+#cp /etc/ccs/linphonerc  /root/.config/linphone/
 echo "Overwriting jwm"
 rm -rf /root/.jwm
 cp -r /etc/ccs/.jwm /root
