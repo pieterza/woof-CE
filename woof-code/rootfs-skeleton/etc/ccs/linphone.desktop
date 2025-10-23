@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Linphone
+GenericName=SIP Phone
+Comment=A libre SIP client
+Type=Application
+Exec=run-as-spot /usr/local/bin/linphone_wrapper.sh
+Icon=linphone
+Terminal=false
+Categories=Network;Telephony;
+MimeType=x-scheme-handler/sip-linphone;x-scheme-handler/sip;x-scheme-handler/sips-linphone;x-scheme-handler/sips;x-scheme-handler/tel;x-scheme-handler/callto;x-scheme-handler/linphone-config;
+X-PulseAudio-Properties=media.role=phone

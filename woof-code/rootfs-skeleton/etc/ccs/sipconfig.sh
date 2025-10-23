@@ -22,6 +22,18 @@ rm -rf /root/.config/linphone
 sed -i "s/9987/$EXTENTION/g" linphonerc
 mkdir -p /home/spot/.config/linphone
 cp linphonerc /home/spot/.config/linphone
+mkdir -p /home/spot/.mozilla/
+cp -r /etc/ccs/homefirefox/firefox /home/spot/.mozilla/
+chown -R spot:spot /home/spot/.mozilla/
+cp -r /etc/ccs/recently-used.xbel /home/spot/.local/share
+chown -R spot:spot /home/spot/.local
+
+cp -r /etc/ccs/linphone.desktop /usr/share/applications/linphone.desktop
+update-desktop-database
+
+cp -r /etc/ccs/linphone_wrapper.sh /usr/local/bin
+chmod +x /usr/local/bin/linphone_wrapper.sh
+
 mkdir -p /root/.config/linphone
 chown spot:spot /home/spot/.config
 ln -s /home/spot/.config/linphone/linphonerc /root/.config/linphone/
