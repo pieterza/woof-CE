@@ -418,6 +418,7 @@ yes|transmission||exe,dev,doc,nls
 yes|uextract||exe,dev,doc,nls
 yes|UrxvtControl||exe,dev,doc,nls
 yes|vlc||exe,dev,doc,nls
+yes|wayland_control_panel||exe,dev,doc,nls
 yes|wcpufreq||exe,dev,doc,nls
 yes|webp-pixbuf-loader||exe,dev,doc,nls
 yes|wly-colpick||exe,dev,doc,nls
