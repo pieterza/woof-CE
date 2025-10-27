@@ -16,3 +16,4 @@ echo "Configuring SIP extentions..."
 echo "Configuring Firefox"
 mkdir -p /etc/firefox/policies
 cp /etc/ccs/firefox/policies/* /etc/firefox/policies
+set_bg /etc/ccs/wall.svg
