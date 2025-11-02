@@ -3,17 +3,6 @@ log_collection_upload_server_url=https://www.linphone.org:444/lft.php
 uuid=f80c1de3-9aa2-0047-9290-5104bc1b6d77
 hide_empty_chat_rooms=0
 
-[sound]
-ec_filter=MSWebRTCAEC
-playback_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
-ringer_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
-capture_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
-media_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
-mic_gain_db=0.000000
-playback_gain_db=0.000000
-remote_ring=/usr/share/sounds/linphone/ringback.wav
-disable_record_on_mute=0
-
 [net]
 nat_policy_ref=eYcyK0c~q~h-2fd
 friendlist_subscription_enabled=1

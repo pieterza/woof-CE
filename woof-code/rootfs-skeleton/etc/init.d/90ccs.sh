@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo "Setting up Headset as system default"
+/etc/ccs/setup_headset.sh >> /tmp/thisthing
+
 echo "Setting up SIP profile"
 mkdir -p /root/.config/linphone
 #cp /etc/ccs/linphonerc  /root/.config/linphone/
