@@ -227,3 +227,9 @@ username=9987
 passwd=1234
 realm=192.168.0.126
 domain=192.168.0.126
+
+[sound]
+playback_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
+ringer_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
+capture_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
+media_dev_id=PulseAudio Unknown: Built-in Audio Analog Stereo
