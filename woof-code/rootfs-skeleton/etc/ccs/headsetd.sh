@@ -1,67 +1,55 @@
 #!/bin/bash
 #
 # auto_linphone_usb_switch.sh
-# Detects Axtel USB headset via PipeWire (wpctl) and updates ~/.linphonerc
+# Detects USB headset via PipeWire (wpctl) and updates ~/.linphonerc accordingly
 #
 
-LINPHONE_RC="/home/spot/.config/linphone/linphonerc"
+LINPHONE_RC="$HOME/.linphonerc"
 TMP_RC="/tmp/.linphonerc.$$"
 
-# === CONFIGURE YOUR ACTUAL DEVICE NAMES FROM `wpctl status` ===
-DEFAULT_PLAYBACK="Built-in Audio Analog Stereo"
-DEFAULT_RINGER="Built-in Audio Analog Stereo"
-DEFAULT_CAPTURE="Built-in Audio Analog Stereo"
+DEFAULT_PLAYBACK="ALSA Unknown: Intel 82801AA-ICH"
+DEFAULT_RINGER="ALSA Unknown: Intel 82801AA-ICH"
+DEFAULT_CAPTURE="ALSA Unknown: Intel 82801AA-ICH"
+DEFAULT_MEDIA="PulseAudio Unknown: Built-in Audio Analog Stereo"
 
-USB_PLAYBACK="Axtel USB Analog Stereo"
-USB_RINGER="Axtel USB Analog Stereo"
-USB_CAPTURE="Axtel USB Mono"
+USB_PLAYBACK="ALSA Unknown: USB Headset"
+USB_RINGER="ALSA Unknown: USB Headset"
+USB_CAPTURE="ALSA Unknown: USB Headset"
+USB_MEDIA="PulseAudio Unknown: USB Headset Analog Stereo"
 
-# Optional: media_dev_id (rarely used, but safe to set)
-DEFAULT_MEDIA="$DEFAULT_PLAYBACK"
-USB_MEDIA="$USB_PLAYBACK"
-
-# === FUNCTION: detect if Axtel USB is present and active ===
 detect_usb_audio() {
-    wpctl status | grep -q "Axtel USB"
+    wpctl status | grep -Eqi 'usb.*(headset|audio|stereo)'
 }
 
 # === FUNCTION: update linphonerc ===
 update_linphonerc() {
-    local mode="$1"  # "usb" or "default"
-    local p_dev r_dev c_dev m_dev
+    local mode="$1"   # "usb" or "default"
+
+    cp "$LINPHONE_RC" "$TMP_RC" || exit 1
 
     if [[ "$mode" == "usb" ]]; then
-        p_dev="$USB_PLAYBACK"
-        r_dev="$USB_RINGER"
-        c_dev="$USB_CAPTURE"
-        m_dev="$USB_MEDIA"
-        echo "[INFO] Switching Linphone → Axtel USB Headset"
+        sed -i "
+            s|^playback_dev_id=.*|playback_dev_id=${USB_PLAYBACK}|
+            s|^ringer_dev_id=.*|ringer_dev_id=${USB_RINGER}|
+            s|^capture_dev_id=.*|capture_dev_id=${USB_CAPTURE}|
+            s|^media_dev_id=.*|media_dev_id=${USB_MEDIA}|
+        " "$TMP_RC"
+        echo "[INFO] Switched Linphone sound devices → USB headset"
     else
-        p_dev="$DEFAULT_PLAYBACK"
-        r_dev="$DEFAULT_RINGER"
-        c_dev="$DEFAULT_CAPTURE"
-        m_dev="$DEFAULT_MEDIA"
-        echo "[INFO] Switching Linphone → Built-in Audio"
+        sed -i "
+            s|^playback_dev_id=.*|playback_dev_id=${DEFAULT_PLAYBACK}|
+            s|^ringer_dev_id=.*|ringer_dev_id=${DEFAULT_RINGER}|
+            s|^capture_dev_id=.*|capture_dev_id=${DEFAULT_CAPTURE}|
+            s|^media_dev_id=.*|media_dev_id=${DEFAULT_MEDIA}|
+        " "$TMP_RC"
+        echo "[INFO] Reverted Linphone sound devices → default audio"
     fi
 
-    # Backup and edit
-    cp "$LINPHONE_RC" "$TMP_RC" || { echo "[ERROR] Failed to copy linphonerc"; return 1; }
-
-    sed -i "
-        s|^playback_dev_id=.*|playback_dev_id=$p_dev|
-        s|^ringer_dev_id=.*|ringer_dev_id=$r_dev|
-        s|^capture_dev_id=.*|capture_dev_id=$c_dev|
-        s|^media_dev_id=.*|media_dev_id=$m_dev|
-    " "$TMP_RC"
-
     mv "$TMP_RC" "$LINPHONE_RC"
-    echo "[SUCCESS] Updated $LINPHONE_RC"
 }
 
 # === MAIN LOOP ===
 last_state=""
-
-echo "[START] Linphone USB auto-switch daemon started."
 
 while true; do
     if detect_usb_audio; then
