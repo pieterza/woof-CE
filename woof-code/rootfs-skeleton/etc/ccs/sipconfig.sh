@@ -40,5 +40,4 @@ ln -s /home/spot/.config/linphone/linphonerc /root/.config/linphone/
 chown spot:spot /root/.config/linphone/linphonerc
 chown -R spot:spot /home/spot
 
-su - spot -c '/etc/ccs/headsetd.sh &'
-
+su - spot -c '/etc/ccs/headsetd.sh'
