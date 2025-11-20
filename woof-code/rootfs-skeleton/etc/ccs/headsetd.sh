@@ -11,7 +11,7 @@ detect_usb_audio() {
 }
 
 detect_usb_audio_mic() {
-    wpctl status | grep USB | grep -vol | grep -i mono  | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
+    wpctl status | grep USB | grep vol | grep -i mono  | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
 }
 
 USB_DEV="PulseAudio Unknown: $(detect_usb_audio)"
