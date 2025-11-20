@@ -8,7 +8,7 @@ LINPHONE_RC="/home/spot/.config/linphone/linphonerc"
 
 detect_usb_audio() {
   for i in USB headset Headset; do
-    if wpctl status | grep $i | grep vol | grep -i stereo | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs | grep $i; then
+    if wpctl status | grep $i | grep vol | grep -i stereo | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs | grep $i >/dev/null; then
       wpctl status | grep $i | grep vol | grep -i stereo | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
       break
     fi
@@ -17,7 +17,7 @@ detect_usb_audio() {
 
 detect_usb_audio_mic() {
    for i in USB headset Headset; do
-     if wpctl status | grep $i | grep vol | grep -i mono | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs | grep $i; then
+     if wpctl status | grep $i | grep vol | grep -i mono | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs | grep $i >/dev/null; then
        wpctl status | grep $i | grep vol | grep -i mono  | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
        break
      fi
@@ -33,4 +33,5 @@ sed -i "
   s|^media_dev_id=.*|media_dev_id=${USB_MEDIA}|
 "  $LINPHONE_RC
 
-echo "[INFO] Switched Linphone sound devices to: $USB_DEV for output and $USB_DEV_MIC for input"
+echo "[INFO] Switched Linphone sound devices to OUTPUT: $USB_DEV"
+echo "[INFO] Switched Linphone sound devices to INPUT: $USB_DEV_MIC"
