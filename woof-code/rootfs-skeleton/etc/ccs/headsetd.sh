@@ -7,11 +7,21 @@ LINPHONE_RC="/home/spot/.config/linphone/linphonerc"
 
 
 detect_usb_audio() {
-    wpctl status | grep USB | grep vol | grep -i stereo | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
+  for i in USB headset Headset; do
+    if wpctl status | grep $i | grep vol | grep -i stereo | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs | grep $i; then
+      wpctl status | grep $i | grep vol | grep -i stereo | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
+      break
+    fi
+  done
 }
 
 detect_usb_audio_mic() {
-    wpctl status | grep USB | grep vol | grep -i mono  | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
+   for i in USB headset Headset; do
+     if wpctl status | grep $i | grep vol | grep -i mono | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs | grep $i; then
+       wpctl status | grep $i | grep vol | grep -i mono  | grep -oP '\d+\.\s*\K[^[]*' | head -n1 | xargs
+       break
+     fi
+   done
 }
 
 USB_DEV="PulseAudio Unknown: $(detect_usb_audio)"
