@@ -15,7 +15,7 @@ detect_usb_audio_mic() {
 }
 
 USB_DEV="PulseAudio Unknown: $(detect_usb_audio)"
-USB_DEV_MIC="PulseAudio Unknown $(detect_usb_audio_mic)"
+USB_DEV_MIC="PulseAudio Unknown: $(detect_usb_audio_mic)"
 sed -i "
   s|^playback_dev_id=.*|playback_dev_id=${USB_DEV}|
   s|^ringer_dev_id=.*|ringer_dev_id=${USB_DEV}|
