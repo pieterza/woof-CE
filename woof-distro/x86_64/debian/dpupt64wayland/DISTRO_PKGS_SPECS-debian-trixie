@@ -286,13 +286,13 @@ fi
 
 if [ "$DISTRO_TARGETARCH" = "x86" -o "$DISTRO_TARGETARCH" = "x86_64" ]; then
     PKGS_SPECS_TABLE="$PKGS_SPECS_TABLE
-yes|non-free-firmware-pc|amd64-microcode,bluez-firmware,firmware-amd-graphics,firmware-atheros,firmware-brcm80211,firmware-intel-sound,firmware-iwlwifi,firmware-linux,firmware-linux-nonfree,firmware-realtek,firmware-sof-signed,firmware-misc-nonfree,firmware-mediatek,firmware-intel-misc,firmware-intel-graphics,firmware-nvidia-graphics,intel-microcode|exe,dev,doc,nls||deps:yes # based on live-task-non-free-firmware-pc
+yes|non-free-firmware-pc|amd64-microcode,bluez-firmware,firmware-amd-graphics,firmware-atheros,firmware-brcm80211,firmware-intel-sound,firmware-iwlwifi,firmware-linux,firmware-linux-nonfree,firmware-realtek,firmware-sof-signed,firmware-misc-nonfree,firmware-mediatek,firmware-intel-misc,firmware-intel-graphics,firmware-nvidia-graphics,intel-microcode,firmware-zd1211|exe,dev,doc,nls||deps:yes # based on live-task-non-free-firmware-pc
 "
 fi
 
 #TrixiePup64 extra apps/libs
 PKGS_SPECS_TABLE="$PKGS_SPECS_TABLE
-yes|qpdfview|qpdfview|exe,dev,doc,nls
+yes|qpdfview|qpdfview|exe,dev,doc,nls||deps:yes
 ##########yes|qpdfview|qpdfview,qpdfview-djvu-plugin,qpdfview-ps-plugin,qpdfview-pdf-poppler-plugin,qpdfview-translations,libsynctex2,libsynctex-dev,libpoppler-qt5-1,libqt5concurrent5,libqt5printsupport5,libqt5sql5,libqt5sql5-sqlite,libqt5svg5,libqt5xml5,libdouble-conversion3,libmd4c0,libqt5core5a,libqt5dbus5,libqt5gui5,libqt5network5,libqt5widgets5,libqt5x11extras5,libxcb-icccm4,libxcb-image0,libxcb-keysyms1,libxcb-render-util0,libxcb-xinerama0,libxcb-xinput0,libxkbcommon-x11-0,libxcb-xkb1|exe,dev,doc,nls #includes qt5 deps for simplescreenrecorder below
 yes|qwinff|qwinff|exe,dev,doc,nls
 ##########yes|qwinff|qwinff,libmujs3,libopencore-amrnb0,libopencore-amrwb0,libqt5opengl5,libsox-fmt-alsa,libsox-fmt-base,libsox3,sox|exe,dev,doc,nls
@@ -303,11 +303,11 @@ yes|diffuse|diffuse|exe,dev,doc,nls
 yes|easytag|easytag|exe,dev>null,doc,nls||deps:yes
 ##########yes|easytag|easytag,libid3-3.8.3v5,libid3tag0,libopusfile0,libtag1v5,libtag1v5-vanilla,libwavpack1|exe,dev,doc,nls
 yes|ffmpeg|ffmpeg,libavc1394-0,libavdevice61,libcaca0,libcdio-cdda2t64,libcdio-paranoia2t64,libcdio19t64,libdc1394-25,libdecor-0-0,libglut3.12,libiec61883-0,libopenal-data,libopenal1,libraw1394-11,libsdl2-2.0-0,libslang2,libsndio7.0
-yes|gcolor3|gcolor3|exe,dev,doc,nls
+yes|gcolor3|gcolor3|exe,dev,doc,nls||deps:yes
 yes|libgif7|libgif7|exe,dev>null,doc>null,nls>null #dependency of imlib2
 yes|grub4dos||exe,dev>null,doc,nls
 ##########yes|guvcview|guvcview,libgsl27,libgslcblas0,libguvcview-2.1-2,libv4l-0,libv4lconvert0|exe,dev,doc,nls
-yes|guvcview|guvcview,libc-dev-bin|exe,dev,doc,nls
+yes|guvcview|guvcview,libc-dev-bin|exe,dev,doc,nls||deps:yes
 yes|hardinfo2|hardinfo2|exe,dev>null,doc,nls||deps:yes
 ##########yes|hardinfo|hardinfo,libc-dev-bin|exe,dev,doc,nls
 yes|htop|htop|exe,dev>null,doc,nls||deps:yes
@@ -395,7 +395,7 @@ yes|pmenumanager||exe,dev,doc,nls
 yes|pRun||exe,dev,doc,nls
 #yes|psynclient||exe,dev,doc,nls
 #yes|PupClockset||exe,dev,doc,nls
-#yes|PupControl||exe,dev,doc,nls
+yes|pupcontrol_wayland||exe,dev,doc,nls
 yes|Pup-Kview||exe,dev,doc,nls
 yes|pupmd5sum||exe,dev,doc,nls
 #yes|pupmtp||exe,dev,doc,nls

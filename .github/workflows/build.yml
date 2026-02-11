@@ -120,7 +120,7 @@ jobs:
       with:
         repo: puppylinux-woof-CE/woof-CE
         branch: testing
-        workflow: ${{ startsWith(inputs.kernel, 'debian-') && 'dpup-kernel.yml' || (startsWith(inputs.kernel, 'ubuntu-') && 'upup-kernel.yml' || 'kernel-kit.yml') }}
+        workflow: ${{ startsWith(inputs.kernel, 'debian-') && 'dpup-kernel.yml' || startsWith(inputs.kernel, 'ubuntu-') && 'upup-kernel.yml' || startsWith(inputs.kernel, '5.') && 'kernel-kit-k5.yml' || startsWith(inputs.kernel, '6.6') && 'kernel-kit-k6.6.yml' || startsWith(inputs.kernel, '6.12') && 'kernel-kit-k6.12.yml' || startsWith(inputs.kernel, '6.18') && 'kernel-kit-k6.18.yml' || startsWith(inputs.kernel, '6.1') && 'kernel-kit-k6.1.yml' }}
         workflow_conclusion: success
         name: ${{ env.kernel_artifact }}
         path: output

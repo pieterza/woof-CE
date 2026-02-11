@@ -25,6 +25,7 @@ z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/main/binary-$
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/non-free-firmware/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-non-free-firmware
 z|https://http.us.debian.org/debian/dists/${DISTRO_COMPAT_VERSION}/contrib/binary-${DBIN_ARCH}/Packages.xz|Packages-debian-${DISTRO_COMPAT_VERSION}-contrib
+z|http://deb-multimedia.org/dists/${DISTRO_COMPAT_VERSION}/main/binary-${DBIN_ARCH}/Packages.xz|Packages-plus-${DISTRO_COMPAT_VERSION}-multimedia
 "
 
 #-------------------
@@ -39,6 +40,7 @@ REPOS_DISTRO_COMPAT="
 z|https://http.us.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 z|https://mirrors.kernel.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
 z|https://ftp.de.debian.org/debian|Packages-debian-${DISTRO_COMPAT_VERSION}-*
+z|http://deb-multimedia.org/|Packages-plus-${DISTRO_COMPAT_VERSION}-multimedia
 "
 
 
