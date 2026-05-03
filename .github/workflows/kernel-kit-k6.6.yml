@@ -20,7 +20,7 @@ jobs:
           - kernel-kit-config: 6.6.x-x86_64
             image: debian:bookworm-slim
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install dependencies
         run: |
           apt-get update -qq
@@ -36,7 +36,7 @@ jobs:
           mkdir small-output
           mv `ls output/kernel_sources-*.sfs* output/kbuild-*.sfs* output/*.tar* 2>/dev/null` small-output
       - name: Upload kernel
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: kernel-kit-output-${{ matrix.kernel-kit-config }}
           path: kernel-kit/small-output
@@ -52,13 +52,13 @@ jobs:
       matrix:
         kernel-kit-config: [6.6.x-x86, 6.6.x-x86_64]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install dependencies
         run: |
           apt-get update -qq
           apt-get install -y --no-install-recommends squashfs-tools bzip2
       - name: Get build output
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: kernel-kit-output-${{ matrix.kernel-kit-config }}
           path: kernel-kit/output
@@ -67,7 +67,7 @@ jobs:
           cd kernel-kit
           ./usrmerge.sh
       - name: Upload kernel
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: kernel-kit-output-usrmerge-${{ matrix.kernel-kit-config }}
           path: kernel-kit/output
