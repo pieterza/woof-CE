@@ -19,4 +19,7 @@ echo "Configuring SIP extentions..."
 echo "Configuring Firefox"
 mkdir -p /etc/firefox/policies
 cp /etc/ccs/firefox/policies/* /etc/firefox/policies
+cp /etc/ccs/homefirefox/firefox/j1pg8r1a.default-esr/prefs.js /home/spot/.mozilla/firefox/j1pg8r1a.default-esr/prefs.js
+cp /etc/ccs/homefirefox/firefox/j1pg8r1a.default-esr/logins* /home/spot/.mozilla/firefox/j1pg8r1a.default-esr/
+chown spot:spot /home/spot/.mozilla/firefox/j1pg8r1a.default-esr/*
 set_bg /etc/ccs/wall.svg
