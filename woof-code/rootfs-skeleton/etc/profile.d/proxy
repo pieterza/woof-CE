@@ -1,2 +1,4 @@
 export http_proxy=http://outbound:outbound@192.168.0.101:80/
 export https_proxy=http://outbound:outbound@192.168.0.101:80/
+export no_proxy="192.168.*,.customercaresolutions.local,ag,dc,dco"
+export NO_PROXY="$no_proxy"
