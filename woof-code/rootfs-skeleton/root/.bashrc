@@ -19,3 +19,6 @@ if [ ! -e /usr/bin/sudo ]; then
   fi
  }
 fi
+
+export no_proxy="192.168.*,.customercaresolutions.local,ag,dc,dco"
+export NO_PROXY="$no_proxy"

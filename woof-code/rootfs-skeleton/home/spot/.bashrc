@@ -9,3 +9,6 @@ if [ -x /usr/lib/command-not-found ]; then
   return 127
  }
 fi
+
+export no_proxy="192.168.*,.customercaresolutions.local,ag,dc,dco"
+export NO_PROXY="$no_proxy"
