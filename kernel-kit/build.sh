@@ -701,6 +701,9 @@ fi
 
 #####################
 # pause to configure
+# add-500hz.txt adds 500hz to the standard set
+sed -i $'/config HZ_1000/{e cat ../add-500hz.txt\n}' ../linux/kernel/Kconfig.hz
+sed -i '/default 300 if HZ_300/a \\tdefault 500 if HZ_500' ../linux/kernel/Kconfig.hz
 function do_kernel_config() {
 	log_msg "$MAKE $1"
 	$MAKE $1 ##
