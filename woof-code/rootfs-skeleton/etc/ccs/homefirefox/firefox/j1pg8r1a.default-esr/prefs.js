@@ -220,6 +220,7 @@ user_pref("sidebar.revamp", true);
 user_pref("sidebar.revamp.defaultLauncherVisible", false);
 user_pref("sidebar.visibility", "hide-sidebar");
 user_pref("signon.autologin.proxy", true);
+user_pref("signon.rememberSignons", true);
 user_pref("termsofuse.acceptedDate", "1778676304159");
 user_pref("termsofuse.acceptedVersion", 4);
 user_pref("toolkit.profiles.storeID", "79692fe7");
