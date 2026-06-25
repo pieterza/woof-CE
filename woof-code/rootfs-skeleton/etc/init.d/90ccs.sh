@@ -26,7 +26,7 @@ echo "Configuring SIP extentions..."
 #echo 'export NO_PROXY=$no_proxy' >> /home/spot/.bashrc
 #echo 'export no_proxy="localhost,127.0.0.1,192.168.0.0/16,.customercaresolutions.local,ag,ag.customercaresolutions.local,dc,dco"' >> /home/spot/.bash_profile
 #echo 'export NO_PROXY=$no_proxy' >> /home/spot/.bash_profile
-cp -r /etc/ccs/chromium/.* /home/spot/.chromium/
-chown -R spot:spot /home/spot/.chromium/
+cp -r /etc/ccs/chrome-iso-profile/ /tmp/
+chown -R spot:spot /tmp/chrome-iso-profile
 chown -R spot:spot /home/spot/.bash*
 set_bg /etc/ccs/wall.svg
