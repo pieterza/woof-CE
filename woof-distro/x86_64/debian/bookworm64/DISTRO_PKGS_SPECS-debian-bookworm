@@ -56,6 +56,7 @@ yes|debianutils|debianutils|exe,dev,doc,nls||deps:yes
 yes|dialog|dialog|exe,dev>null,doc,nls||deps:yes
 yes|diffutils|diffutils|exe,dev>null,doc,nls||deps:yes
 yes|dmidecode|dmidecode|exe,dev>null,doc,nls||deps:yes
+yes|privoxy|privoxy|exe,dev>null,doc,nls||deps:yes
 yes|dosfstools|dosfstools|exe,dev>null,doc,nls||deps:yes
 yes|dpkg-deb|dpkg|exe,dev>null,doc,nls||deps:yes
 yes|e2fsprogs|e2fsprogs,libblkid-dev,comerr-dev,ss-dev|exe,dev,doc,nls||deps:yes #note, strange ubuntu seems to have lost the dev component of libuuid.
