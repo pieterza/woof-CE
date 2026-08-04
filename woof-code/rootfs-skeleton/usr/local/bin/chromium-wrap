@@ -1,0 +1,5 @@
+#!/bin/bash
+exec /usr/bin/chromium-browser \
+  --proxy-server="http://CCS%5Coutbound:outbound@192.168.0.101:80" \
+  --proxy-bypass-list="<-loopback>" \
+  "$@"

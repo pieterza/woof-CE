@@ -10,5 +10,9 @@ if [ -x /usr/lib/command-not-found ]; then
  }
 fi
 
-export no_proxy="localhost,127.0.0.1,192.168.0.0/16,.customercaresolutions.local,ag,ag.customercaresolutions.local,dc,dco"
-export NO_PROXY="$no_proxy"
+export http_proxy="http://CCS%5Coutbound:outbound@192.168.0.101:80"
+export https_proxy="http://CCS%5Coutbound:outbound@192.168.0.101:80"
+export HTTP_PROXY="http://CCS%5Coutbound:outbound@192.168.0.101:80"
+export HTTPS_PROXY="http://CCS%5Coutbound:outbound@192.168.0.101:80"
+export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12"
+export NO_PROXY="localhost,127.0.0.1,::1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12"
