@@ -1,0 +1,3 @@
+2026/09/01-07:13:54.449 293c Reusing MANIFEST /initrd/mnt/tmpfs/tmp/foobar/Default/Sync Data/LevelDB/MANIFEST-000001
+2026/09/01-07:13:54.450 293c Recovering log #3
+2026/09/01-07:13:54.450 293c Reusing old log /initrd/mnt/tmpfs/tmp/foobar/Default/Sync Data/LevelDB/000003.log 
