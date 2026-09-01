@@ -32,7 +32,7 @@ on:
       kernel:
         description: 'Kernel version'
         required: false
-        default: '6.12.x'
+        default: '6.18.x'
       prefix:
         description: 'File name prefix'
         required: false
