@@ -26,7 +26,8 @@
 <!-- jwm menus for puppy Linux -->
 <RootMenu label="Menu" labeled="false" height="24" onroot="9">
 <Menu label="CCS" icon="pc48.png" height="24">
-<Program label="Chromium Browser" icon="Internet.svg" tooltip="Browse the World Wide Web">run-as-spot chromium --proxy-server="http://192.168.0.101" --proxy-bypass-list="localhost;127.0.0.1;<local>;*.local;192.168.0.0/16;192.168.*;online.drivers-circle.co.za;*.drivers-circle.co.za;hermod;nana;herfjotur;freya;dc;hermoor;dco" --user-data-dir="/tmp/foobar"</Program>
+<Program label="Chromium Browser" icon="Internet.svg" tooltip="Browse the World Wide Web">run-as-spot chromium --proxy-server="http://192.168.0.101:80" --proxy-bypass-list="localhost;127.0.0.1;&lt;local&gt;;*.local;192.168.0.0/16;192.168.*;online.drivers-circle.co.za;*.drivers-circle.co.za;hermod;nana;herfjotur;freya;dc;hermoor;dco" --user-data-dir="/tmp/foobar"</Program>
+ <Separator/>
  <Separator/> 
 <Program label="Linphone" icon="linphone" tooltip="Privacy-oriented voice, video, chat, and conference platform">run-as-spot linphone --config=/home/spot/.config/linphone/linphonerc</Program>
  <Separator/>
