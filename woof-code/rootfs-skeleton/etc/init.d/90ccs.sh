@@ -26,6 +26,10 @@ echo "Configuring SIP extentions..."
 #echo 'export NO_PROXY=$no_proxy' >> /home/spot/.bashrc
 #echo 'export no_proxy="localhost,127.0.0.1,192.168.0.0/16,.customercaresolutions.local,ag,ag.customercaresolutions.local,dc,dco"' >> /home/spot/.bash_profile
 #echo 'export NO_PROXY=$no_proxy' >> /home/spot/.bash_profile
+# init spothome
+run-as-spot ls
+run-as-spot touch blah
+#
 chown -R spot:spot /home/spot/.bash*
 chown -R spot:spot /etc/ccs
 cd /var/tmp
