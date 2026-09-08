@@ -1,0 +1,29 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/icon-16.png",
+         "32": "icons/icon-32.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Proxy Auto Auth"
+   },
+   "background": {
+      "service_worker": "service_worker.js"
+   },
+   "description": "Automatically answers proxy authentication prompts with locally saved credentials.",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtI2jL4IvMUQZuujYw7gIjWa6qZw4DdjD4v0WrsOfu33Mj7FgYmVaUaYJp4qlF0KPF4EYho1D2hZAXCU0waKZjxy5tHrRTG/8iCDoe2ecqrdbC+IzT31N9V/+vaQ/GfCjKppQzShe1D/BVE0qblEmqB3GYAcAQhSyaOyQenAP/2o5N1vZ/kB4LCEIX4Sh5qT+JR83USkoKGUoNxxmfBK3nPJh8iCGCRQ9zeZoA8mX/SfhowwJoxQmVLU6hZV2IfQiXg70IDfMyWUuwWas1U8auXB59PB+EXj+KubAYmM7BbcpoNYrkA3zly3loKtzadio+nM+4umaYsp34RwGSIT0TQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "116",
+   "name": "Proxy Auto Auth MV3",
+   "options_page": "popup.html",
+   "permissions": [ "storage", "webRequest", "webRequestAuthProvider" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}
