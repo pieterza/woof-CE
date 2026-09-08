@@ -33,4 +33,5 @@ run-as-spot touch blah
 #
 chown -R spot:spot /home/spot/.bash*
 chown -R spot:spot /etc/ccs
+chmod +x /etc/ccs/chrome.sh
 set_bg /etc/ccs/wall.svg
