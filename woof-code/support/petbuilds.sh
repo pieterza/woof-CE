@@ -130,7 +130,7 @@ EOF
                 ln -s bash petbuild-rootfs-complete/bin/sh
 
                 if [ ! -f ../petbuild-cache/busybox ]; then
-                    wget -t 1 -T 15 https://busybox.net/downloads/busybox-1.36.0.tar.bz2
+                    wget -t 1 -T 15 https://mirrors.netix.net/slackware/slackware64-current/source/a/mkinitrd/busybox-1.37.0.tar.bz2
                     tar -xjf busybox-1.36.0.tar.bz2
                     cp -f ../rootfs-petbuilds/busybox/DOTconfig busybox-1.36.0/.config
                     cd busybox-1.36.0
