@@ -29,6 +29,7 @@ echo "Configuring SIP extentions..."
 cp -r /etc/ccs/chrome-iso-profile/ /tmp/
 chown -R spot:spot /tmp/chrome-iso-profile
 chown -R spot:spot /home/spot/.bash*
+chown -R spot:spot /etc/ccs
 cp -r /etc/ccs/foobar/ /home/spot/
-chown -R spot:spot /home/spot/foodbar
+chown -R spot:spot /home/spot/foobar
 set_bg /etc/ccs/wall.svg
