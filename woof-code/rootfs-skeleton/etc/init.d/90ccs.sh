@@ -15,6 +15,7 @@ cp /etc/ccs/jwm* /root/.jwm/
 echo "Setting wallpaper"
 set_bg /etc/ccs/wall.svg
 echo "Configuring SIP extentions..."
+sleep 1
 /etc/ccs/sipconfig.sh
 #echo "Configuring Firefox"
 #mkdir -p /etc/firefox/policies
