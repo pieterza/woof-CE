@@ -29,7 +29,7 @@
 <Program label="Chromium Browser" icon="Internet.svg" tooltip="Browse the World Wide Web">run-as-spot /etc/ccs/chrome.sh</Program>
  <Separator/>
  <Separator/> 
-<Program label="Linphone" icon="linphone" tooltip="Privacy-oriented voice, video, chat, and conference platform">sleep 5;run-as-spot linphone --config=/home/spot/.config/linphone/linphonerc</Program>
+<Program label="Linphone" icon="linphone" tooltip="Privacy-oriented voice, video, chat, and conference platform">sleep 8;run-as-spot linphone --config=/home/spot/.config/linphone/linphonerc</Program>
  <Separator/>
 <Program label="lxterminal" icon="lxterminal" tooltip="terminal">lxterminal</Program>
  <Separator/> 
