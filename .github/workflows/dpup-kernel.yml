@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     if: github.event_name != 'schedule' || (github.repository == 'puppylinux-woof-CE/woof-CE' && github.ref == 'refs/heads/testing')
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     container:
       image: debian:${{ matrix.release }}-slim
       volumes:
@@ -17,12 +17,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - release: bullseye
-            arch: x86_64
-            base: config.amd64_none_amd64.xz
-          - release: bullseye
-            arch: x86
-            base: config.i386_none_686-pae.xz
           - release: bookworm
             arch: x86_64
             base: config.amd64_none_amd64.xz
@@ -39,7 +33,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Install dependencies
         run: |
-          rm -rf /hostusr/local/lib/android /hostusr/share/dotnet # increase free space, we don't need these
+          rm -rf /hostusr/local/lib/android /hostusr/share/dotnet /hostusr/local/.ghcup /hostusr/share/swift # increase free space, we don't need these
           [ ${{ matrix.release }} = sid ] || echo "deb http://deb.debian.org/debian ${{ matrix.release }} main contrib non-free" > /etc/apt/sources.list
           [ ${{ matrix.release }} = sid ] || echo "deb http://deb.debian.org/debian ${{ matrix.release }}-updates main contrib non-free" >> /etc/apt/sources.list
           [ ${{ matrix.release }} = sid ] || echo "deb http://deb.debian.org/debian-security ${{ matrix.release }}-security main contrib non-free" >> /etc/apt/sources.list
