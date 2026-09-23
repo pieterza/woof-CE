@@ -4,6 +4,6 @@ GenericName=Browser
 Comment=Browser
 Type=Application
 Exec=run-as-spot /etc/ccs/chrome.sh
-Icon="Internet.svg"
+Icon=chromium
 Terminal=false
 Categories=Network;
