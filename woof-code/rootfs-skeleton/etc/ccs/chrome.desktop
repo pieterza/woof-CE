@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Chrome
+GenericName=Browser
+Comment=Browser
+Type=Application
+Exec=run-as-spot /etc/ccs/chrome.sh
+Icon="Internet.svg"
+Terminal=false
+Categories=Network;
