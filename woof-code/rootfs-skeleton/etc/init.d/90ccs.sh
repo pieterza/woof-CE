@@ -37,5 +37,6 @@ chown -R spot:spot /etc/ccs
 chmod +x /etc/ccs/chrome.sh
 set_bg /etc/ccs/wall.svg
 sleep 2
-cp /etc/ccs/linphone.desktop /root/Desktop
-cp /etc/ccs/chrome.desktop /root/Desktop
+#Disable icons until we can rid the warning
+#cp /etc/ccs/linphone.desktop /root/Desktop
+#cp /etc/ccs/chrome.desktop /root/Desktop
