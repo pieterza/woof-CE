@@ -116,7 +116,7 @@ EOF
             # speed up configure scripts by using a native shell executable and a native busybox
             if [ $CROSSBUILD -eq 1 ]; then
                 if [ ! -f ../petbuild-cache/bash ]; then
-                    wget -t 1 -T 15 https://ftp.gnu.org/gnu/bash/bash-5.1.tar.gz
+                    wget -t 1 -T 15 https://mirrors.ibiblio.org/pub/mirrors/gnu/bash/bash-5.1.12.tar.gz
                     tar -xzf bash-5.1.tar.gz
                     cd bash-5.1
                     CFLAGS=-O3 LDFLAGS="-static -Wl,-s" ./configure --enable-minimal-config
