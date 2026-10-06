@@ -7,6 +7,10 @@
 
 export XDG_SESSION_TYPE=x11
 
+# PCManFM reads this before its autostart. A savefile copy with
+# quick_exec=0 would otherwise ask before opening a desktop icon.
+[ -x /etc/ccs/quick_exec.sh ] && /etc/ccs/quick_exec.sh
+
 [ -f /etc/desktop_app ] && read -r desktop < /etc/desktop_app
 [ "$desktop" = "" ] && desktop=rox
 

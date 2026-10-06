@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Before X, and again in case a savefile still has quick_exec=0.
+[ -x /etc/ccs/quick_exec.sh ] && /etc/ccs/quick_exec.sh
+
 echo "Setting up Headset as system default"
 /etc/ccs/setup_headset.sh >> /tmp/thisthing
 
@@ -37,9 +40,10 @@ chown -R spot:spot /etc/ccs
 chmod +x /etc/ccs/chrome.sh
 set_bg /etc/ccs/wall.svg
 sleep 2
-# PCManFM draws /root/Desktop. Mode 755 marks the launchers executable
-# so they are trusted; quick_exec in libfm.conf skips the confirm dialog.
+# Leave these non-executable. Mode 755 makes the fast mime path treat a
+# .desktop file as application/x-executable, which brings the script prompt back.
 mkdir -p /root/Desktop
 cp /etc/ccs/linphone.desktop /root/Desktop/linphone.desktop
 cp /etc/ccs/chrome.desktop /root/Desktop/chrome.desktop
-chmod 755 /root/Desktop/linphone.desktop /root/Desktop/chrome.desktop
+chmod 644 /root/Desktop/linphone.desktop /root/Desktop/chrome.desktop
+/etc/ccs/quick_exec.sh
