@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Chrome
+Name=Chromium
 GenericName=Browser
-Comment=Browser
+Comment=Browse the World Wide Web
 Type=Application
 Exec=run-as-spot /etc/ccs/chrome.sh
 Icon=chromium

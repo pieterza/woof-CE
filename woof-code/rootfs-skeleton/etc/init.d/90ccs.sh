@@ -37,6 +37,9 @@ chown -R spot:spot /etc/ccs
 chmod +x /etc/ccs/chrome.sh
 set_bg /etc/ccs/wall.svg
 sleep 2
-#Disable icons until we can rid the warning
-#cp /etc/ccs/linphone.desktop /root/Desktop
-#cp /etc/ccs/chrome.desktop /root/Desktop
+# PCManFM draws /root/Desktop. Mode 755 marks the launchers executable
+# so they are trusted; quick_exec in libfm.conf skips the confirm dialog.
+mkdir -p /root/Desktop
+cp /etc/ccs/linphone.desktop /root/Desktop/linphone.desktop
+cp /etc/ccs/chrome.desktop /root/Desktop/chrome.desktop
+chmod 755 /root/Desktop/linphone.desktop /root/Desktop/chrome.desktop
