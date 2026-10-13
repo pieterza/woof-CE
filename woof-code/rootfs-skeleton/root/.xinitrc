@@ -147,7 +147,17 @@ fi
 sleep 1 # let the dust settle
 
 case $desktop in
- pcmanfm) pcmanfm --desktop & ;;
+ pcmanfm)
+	# PCManFM asks Execute/Cancel for a desktop launcher unless quick_exec
+	# stayed on. This answers Execute before that dialog is shown. The
+	# library drops itself from LD_PRELOAD so Chrome and Linphone do not
+	# inherit it.
+	if [ -x /usr/local/lib/libccs-quick-exec.so ]; then
+		LD_PRELOAD="/usr/local/lib/libccs-quick-exec.so${LD_PRELOAD:+:$LD_PRELOAD}" pcmanfm --desktop &
+	else
+		pcmanfm --desktop &
+	fi
+	;;
  rox)
 	if [ -f /root/Choices/ROX-Filer/PuppyPan1 ];then
 		roxfiler -p /root/Choices/ROX-Filer/PuppyPin -r /root/Choices/ROX-Filer/PuppyPan1

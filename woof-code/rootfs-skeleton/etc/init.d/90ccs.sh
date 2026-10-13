@@ -47,3 +47,19 @@ cp /etc/ccs/linphone.desktop /root/Desktop/linphone.desktop
 cp /etc/ccs/chrome.desktop /root/Desktop/chrome.desktop
 chmod 644 /root/Desktop/linphone.desktop /root/Desktop/chrome.desktop
 /etc/ccs/quick_exec.sh
+
+# Cover pcmanfm even when a savefile still has an older .xinitrc.
+# Never copy the wrapper onto itself: pcmanfm.real must stay the ELF.
+if [ -x /usr/local/lib/libccs-quick-exec.so ] && [ -x /usr/bin/pcmanfm ]; then
+	if [ ! -x /usr/bin/pcmanfm.real ] && ! grep -q libccs-quick-exec.so /usr/bin/pcmanfm 2>/dev/null; then
+		cp -a /usr/bin/pcmanfm /usr/bin/pcmanfm.real
+	fi
+	if [ -x /usr/bin/pcmanfm.real ]; then
+		cat > /usr/bin/pcmanfm << 'EOF'
+#!/bin/sh
+export LD_PRELOAD="/usr/local/lib/libccs-quick-exec.so${LD_PRELOAD:+:$LD_PRELOAD}"
+exec /usr/bin/pcmanfm.real "$@"
+EOF
+		chmod 755 /usr/bin/pcmanfm
+	fi
+fi
